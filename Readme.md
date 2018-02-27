@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Никифор Денисов](https://up.htmlacademy.ru/htmlcss/20/user/383653).
-* Наставник: `Неизвестно`.
+* Наставник:: [Яна Крикливая](https://htmlacademy.ru/profile/kyarun).
 
 ---
 
