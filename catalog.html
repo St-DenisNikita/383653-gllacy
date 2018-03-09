@@ -25,25 +25,31 @@
 						<li class="main-menu-item"><a href="#" class="main-menu-link">О компании</a></li>
 					</ul>		
 				</nav>
-				<div class="popup">
-					<a class="popup-button" href="#">Поиск</a>
-					<form class="popup-form-search" method="get" action="#">
-						<input type="search" name="search" placeholder="Что ищем?">
-					</form>
-					<a class="popup-button" href="#">Вход</a>
-					<form class="popup-form-login" method="get" action="#">
-						<input type="email" name="login" placeholder="Электронная почта">
-						<input type="password" name="password" placeholder="Пароль">
-						<button type="submit" class="btm">Войти</button>
-						<a href="#" class="link">Забыли пароль?</a>
-						<a href="#" class="link">Новая регистрация</a>
-					</form>
-					<a class="popup-button" href="#">Корзина</a>
-					<form class="popup-form-cart" method="get" action="#">
-						<button type="submit" class="btm">Оформить заказ</button>
-					</form>
+				<div class="actions">
+          <div class="actions-search">
+            <a class="actions-button" href="#">Поиск</a>
+            <form class="actions-form-search" method="get" action="#">
+              <input type="search" name="search" placeholder="Что ищем?">
+            </form>
+          </div>
+					<div class="actions-login">
+            <a class="actions-button" href="#">Вход</a>
+            <form class="actions-form-login" method="get" action="#">
+              <input type="email" name="login" placeholder="Электронная почта">
+              <input type="password" name="password" placeholder="Пароль">
+              <button type="submit" class="btm">Войти</button>
+              <a href="#" class="link">Забыли пароль?</a>
+              <a href="#" class="link">Новая регистрация</a>
+            </form>
+          </div>
+					<div class="actions-cart">
+            <a class="actions-button" href="#">Корзина</a>
+            <form class="actions-form-cart" method="get" action="#">
+              <button type="submit" class="btm">Оформить заказ</button>
+            </form>
+          </div>
 				</div>
-				<div class="contact-us">
+				<div class="contact-us-worktime">
 					<p class="worktime">С 10 до 20, ежедневно</p>
 					<p class="contact">8 812 450-25-25</p>
 				</div>
@@ -84,7 +90,7 @@
 							<input type="checkbox" name="syrup" id="syrup-id"><label for="syrup-id">сиропы</label>
 							<input type="checkbox" name="jam" id="jam-id"><label for="jam-id">джемы</label>
 						</fieldset>
-						<button class="button-filter" type="submit">Применить</button>
+						<button class="filter-button" type="submit">Применить</button>
 					</form>
 				</div>
 				<section class="products">

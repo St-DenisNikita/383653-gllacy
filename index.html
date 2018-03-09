@@ -26,25 +26,31 @@
 						<li class="main-menu-item"><a href="#" class="main-menu-link">О компании</a></li>
 					</ul>		
 				</nav>
-				<div class="popup">
-					<a class="popup-button" href="#">Поиск</a>
-					<form class="popup-form-search" method="get" action="#">
-						<input type="search" name="search" placeholder="Что ищем?">
-					</form>
-					<a class="popup-button" href="#">Вход</a>
-					<form class="popup-form-login" method="get" action="#">
-						<input type="email" name="login" placeholder="Электронная почта">
-						<input type="password" name="password" placeholder="Пароль">
-						<button type="submit" class="btm">Войти</button>
-						<a href="#" class="link">Забыли пароль?</a>
-						<a href="#" class="link">Новая регистрация</a>
-					</form>
-					<a class="popup-button" href="#">Корзина</a>
-					<form class="popup-form-cart" method="get" action="#">
-						<button type="submit" class="btm">Оформить заказ</button>
-					</form>
+				<div class="actions">
+          <div class="actions-search">
+            <a class="actions-button" href="#">Поиск</a>
+            <form class="actions-form-search" method="get" action="#">
+              <input type="search" name="search" placeholder="Что ищем?">
+            </form>
+          </div>
+					<div class="actions-login">
+            <a class="actions-button" href="#">Вход</a>
+            <form class="actions-form-login" method="get" action="#">
+              <input type="email" name="login" placeholder="Электронная почта">
+              <input type="password" name="password" placeholder="Пароль">
+              <button type="submit" class="btm">Войти</button>
+              <a href="#" class="link">Забыли пароль?</a>
+              <a href="#" class="link">Новая регистрация</a>
+            </form>
+          </div>
+					<div class="actions-cart">
+            <a class="actions-button" href="#">Корзина</a>
+            <form class="actions-form-cart" method="get" action="#">
+              <button type="submit" class="btm">Оформить заказ</button>
+            </form>
+          </div>
 				</div>
-				<div class="contact-us">
+				<div class="contact-us-worktime">
           <p class="worktime">С 10 до 20, ежедневно</p>
           <p class="contact">8 812 450-25-25</p>
         </div>
@@ -128,7 +134,7 @@
 						<li class="advantages-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
 					</ul>
 				</section>
-				<article class="blog-teasert">
+				<article class="blog-teaser">
 					<h2 class="blog-teaser-title">Новое в нашем блоге</h2>
 					<a class="blog-teaser-link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
 				</article>
@@ -143,20 +149,22 @@
 					<img src="#" alt="карта">
 				</section>
 				<section class="feedback">
-					<dl class="company-contacts">
-						<dt class="company-address">Адрес главного офиса и офлайн магазина:</dt>
-						<dd class="company-address-actual">ул. Большая Конюшенная 19/8, Санкт-Петербург</dd>
-						<dt class="company-phone">Для заказов по телефону:</dt>
-						<dd class="company-phone-actual">8 812 450-25-25 <span>(с 10 до 20 ежедневно)</span></dd>
+					<dl class="feedback-contacts">
+						<dt class="feedback-contacts-term">Адрес главного офиса и офлайн магазина:</dt>
+						<dd class="feedback-contacts-value">ул. Большая Конюшенная 19/8, Санкт-Петербург</dd>
+						<dt class="feedback-contacts-term">Для заказов по телефону:</dt>
+						<dd class="feedback-contacts-value">8 812 450-25-25 <span>(с 10 до 20 ежедневно)</span></dd>
 					</dl>
-					<button class="button" type="button">Форма обратной связи</button>
-					<form class="feedback-form" method="get" action="#">
-						<p class="feedback-item">Мы обязательно вам ответим!</p>
-						<input type="text" name="name" placeholder="Как вас зовут?">
-						<input type="email" name="email" placeholder="Ваша почта для ответа?">
-						<textarea name="text">Напишите что-нибудь...</textarea>
-						<button class="button" type="submit">Отправить</button>
-					</form>
+					<button class="feedback-button button" type="button">Форма обратной связи</button>
+          <div class="feedback-popup popup">
+            <form class="popup-form" method="get" action="#">
+              <p class="popup-text">Мы обязательно вам ответим!</p>
+              <input type="text" name="name" placeholder="Как вас зовут?">
+              <input type="email" name="email" placeholder="Ваша почта для ответа?">
+              <textarea name="text">Напишите что-нибудь...</textarea>
+              <button class="popup-button button" type="submit">Отправить</button>
+            </form>
+          </div>
 				</section>
 			</main>
 			<footer class="main-footer">
