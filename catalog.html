@@ -49,6 +49,33 @@
      <div class="actions-cart">
       <a class="actions-button" href="#">Корзина</a>
       <form class="actions-form-cart" method="get" action="https://echo.htmlacademy.ru">
+       <table class="cart-table"> <!-- начало таблицы -->
+        <tr class="cart-table-row-name visually-hidden">
+	        <th class="cart-table-cell-name">Удаление товара из корзины</th>
+	        <th class="cart-table-cell-name">Изображение товара</th>
+	        <th class="cart-table-cell-name">Название товара</th>
+	        <th class="cart-table-cell-name">Количество и цена товара</th>
+	        <th class="cart-table-cell-name">Стоимость товара</th>
+        </tr>
+        <tr class="cart-table-row">
+ 	       <td class="cart-table-cell"><button class="cart-table-button" type="button">Удалить товар из корзины</button></td>
+ 	       <td class="cart-table-cell"><img class="cart-table-img" src="img/content/catalog/product-1.jpg" width="33" height="33" alt="мороженое Gllacy сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
+ 	       <td class="cart-table-cell"><span class="cart-table-product">Пломбир с апельсиновым джемом</span></td>
+ 	       <td class="cart-table-cell"><span class="cart-table-quantity">1,5 кг &#215;</span><span class="cart-table-price">200 руб.</span></td>
+ 	       <td class="cart-table-cell"><span class="cart-table-cost">300 руб.</span></td>
+        </tr>
+        <tr class="cart-table-row">
+ 	       <td class="cart-table-cell"><button class="cart-table-button" type="button">Удалить товар из корзины</button></td>
+ 	       <td class="cart-table-cell"><img class="cart-table-img" src="img/content/catalog/product-3.jpg" width="33" height="33" alt="мороженое Gllacy сливочно-клубничное с присыпкой из белого шоколада"></td>
+ 	       <td class="cart-table-cell"><span class="cart-table-product">Клубничный пломбир с присыпкой из белого шоколада</span></td>
+ 	       <td class="cart-table-cell"><span class="cart-table-quantity">1,5 кг &#215;</span><span class="cart-table-price">300 руб.</span></td>
+ 	       <td class="cart-table-cell"><span class="cart-table-cost">450 руб.</span></td>
+        </tr>
+        <tr class="cart-table-row-total">
+ 	       <td class="cart-table-total" colspan="4">Итого:</td>
+ 	       <td class="cart-table-total-cost">750 руб.</td>
+        </tr>
+       </table> <!-- конец таблицы -->
        <button type="submit" class="btm">Оформить заказ</button>
       </form>
      </div>
