@@ -29,16 +29,19 @@
     <div class="actions">
      <div class="actions-search">
       <a class="actions-button" href="#">Поиск</a>
-      <form class="actions-form-search" method="get" action="#">
-       <input type="search" name="search" placeholder="Что ищем?">
+      <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
+       <input class="actions-search-form-item" type="search" name="actions-search" id="search" placeholder="Что ищем?">
+       <label class="visually-hidden" for="search">Поиск</label>
       </form>
      </div>
      <div class="actions-login">
       <a class="actions-button" href="#">Вход</a>
-      <form class="actions-form-login" method="get" action="#">
-       <input type="email" name="login" placeholder="Электронная почта">
-       <input type="password" name="password" placeholder="Пароль">
-       <button type="submit" class="btm">Войти</button>
+      <form class="actions-login-form" method="get" action="https://echo.htmlacademy.ru">
+       <input class="actions-login-form-item" type="email" name="actions-login" id="user-login" placeholder="Электронная почта">
+       <label class="visually-hidden" for="user-login">Введите логин</label>
+       <input class="actions-login-form-item" type="password" name="actions-password" id="user-password" placeholder="Пароль">
+       <label class="visually-hidden" for="user-password">Введите пароль</label>
+       <button class="button actions-login-button" type="submit">Войти</button>
        <a href="#" class="link">Забыли пароль?</a>
        <a href="#" class="link">Новая регистрация</a>
       </form>

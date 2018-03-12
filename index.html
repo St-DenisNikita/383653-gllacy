@@ -29,25 +29,25 @@
     <div class="actions">
      <div class="actions-search">
       <a class="actions-button" href="#">Поиск</a>
-      <form class="actions-form-search" method="get" action="#">
-       <input type="search" name="search" placeholder="Что ищем?">
+      <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
+       <input class="actions-search-form-item" type="search" name="actions-search" id="search" placeholder="Что ищем?">
+       <label class="visually-hidden" for="search">Поиск</label>
       </form>
      </div>
      <div class="actions-login">
       <a class="actions-button" href="#">Вход</a>
-      <form class="actions-form-login" method="get" action="#">
-       <input type="email" name="login" placeholder="Электронная почта">
-       <input type="password" name="password" placeholder="Пароль">
-       <button type="submit" class="btm">Войти</button>
+      <form class="actions-login-form" method="get" action="https://echo.htmlacademy.ru">
+       <input class="actions-login-form-item" type="email" name="actions-login" id="user-login" placeholder="Электронная почта">
+       <label class="visually-hidden" for="user-login">Введите логин</label>
+       <input class="actions-login-form-item" type="password" name="actions-password" id="user-password" placeholder="Пароль">
+       <label class="visually-hidden" for="user-password">Введите пароль</label>
+       <button class="button actions-login-button" type="submit">Войти</button>
        <a href="#" class="link">Забыли пароль?</a>
        <a href="#" class="link">Новая регистрация</a>
       </form>
      </div>
      <div class="actions-cart">
-      <a class="actions-button" href="#">Корзина</a>
-       <form class="actions-form-cart" method="get" action="#">
-        <button type="submit" class="btm">Оформить заказ</button>
-       </form>
+      <a class="actions-button" href="#">Корзина</a> <!-- Убрал форму. В ТЗ прописано наведение только для каталога -->
      </div>
     </div>
     <div class="contact-information">
@@ -145,8 +145,9 @@
     <section class="dispatch">
      <h2 class="visually-hidden">Наша рассылка</h2>
      <p class="dispatch-item">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-     <form class="dispatch-form" method="get" action="#">
-      <input type="email" name="email" placeholder="Электронная почта">
+     <form class="dispatch-form" method="get" action="https://echo.htmlacademy.ru">
+      <input class="dispatch-form-item" type="email" name="dispatch-email" id="dispatch-email" placeholder="Электронная почта">
+      <label class="visually-hidden" for="dispatch-email">Введите адрес электронной почты</label>
       <button class="button dispatch-button" type="submit">Отправить</button>
      </form>
     </section>
@@ -163,12 +164,16 @@
      </dl>
      <button class="feedback-button button" type="button">Форма обратной связи</button>
      <div class="feedback-popup popup">
-      <form class="popup-form" method="get" action="#">
-       <p class="popup-text">Мы обязательно вам ответим!</p>
-       <input type="text" name="name" placeholder="Как вас зовут?">
-       <input type="email" name="email" placeholder="Ваша почта для ответа?">
-       <textarea name="text">Напишите что-нибудь...</textarea>
-       <button class="popup-button button" type="submit">Отправить</button>
+      <form class="feedback-form" method="get" action="https://echo.htmlacademy.ru">
+       <p class="feedback-form-text">Мы обязательно вам ответим!</p>
+       <button class="feedback-form-button" type="button">Закрыть окно формы обратной связи</button>
+       <input class="feedback-form-item" type="text" name="feedback-user-name" id="feedback-user-name" placeholder="Как вас зовут?">
+       <label class="visually-hidden" for="feedback-user-name">Введите Ваше имя</label>
+       <input class="feedback-form-item" type="email" name="feedback-user-email" id="feedback-user-email" placeholder="Ваша почта для ответа?">
+       <label class="visually-hidden" for="feedback-user-email">Введите адрес Вашей электронной почты</label>
+       <textarea class="feedback-form-text" name="feedback-form-text" id="feedback-form-text" placeholder="Напишите что-нибудь..."></textarea>
+       <label class="visually-hidden" for="feedback-form-text">Введите Ваш Вопрос</label>
+       <button class="button" type="submit">Отправить</button>
       </form>
      </div>
     </section>
