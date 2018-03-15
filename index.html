@@ -13,41 +13,48 @@
     </div>
     <nav class="nav-main">
      <ul class="main-menu">
-      <li class="main-menu-item"><a href="#" class="main-menu-link">Каталог</a>
+      <li class="main-menu-item"><a class="main-menu-link" href="#">Каталог</a>
         <ul class="sub-menu">
-         <li class="sub-menu-item"><a href="#" class="sub-menu-link">Новинки</a></li>
-         <li class="sub-menu-item"><a href="catalog.html" class="sub-menu-link">Сливочное</a></li>
-         <li class="sub-menu-item"><a href="#" class="sub-menu-link">Щербеты</a></li>
-         <li class="sub-menu-item"><a href="#" class="sub-menu-link">Фруктовый лед</a></li>
-         <li class="sub-menu-item"><a href="#" class="sub-menu-link">Мелорин</a></li>
+         <li class="sub-menu-item"><a class="sub-menu-link" href="#" tabindex="-1">Новинки</a></li>
+         <li class="sub-menu-item"><a class="sub-menu-link" href="catalog.html" tabindex="-1">Сливочное</a></li>
+         <li class="sub-menu-item"><a class="sub-menu-link" href="#" tabindex="-1">Щербеты</a></li>
+         <li class="sub-menu-item"><a class="sub-menu-link" href="#" tabindex="-1">Фруктовый лед</a></li>
+         <li class="sub-menu-item"><a class="sub-menu-link" href="#" tabindex="-1">Мелорин</a></li>
 							</ul>
       </li>
-      <li class="main-menu-item"><a href="#" class="main-menu-link">Доставка и оплата</a></li>
-      <li class="main-menu-item"><a href="#" class="main-menu-link">О компании</a></li>
+      <li class="main-menu-item"><a class="main-menu-link" href="#">Доставка и оплата</a></li>
+      <li class="main-menu-item"><a class="main-menu-link" href="#">О компании</a></li>
      </ul>		
     </nav>
     <div class="actions">
      <div class="actions-search">
       <a class="actions-button" href="#">Поиск</a>
       <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
-       <input class="actions-search-form-item" type="search" name="actions-search" id="search" placeholder="Что ищем?">
-       <label class="visually-hidden" for="search">Поиск</label>
+       <p class="field actions-search-field">
+        <input class="field-input-search" type="search" name="actions-search" id="actions-search" placeholder="Что ищем?" tabindex="-1">
+        <label class="visually-hidden field-label-search" for="actions-search">Поиск</label>
+       </p>
+       <button class="visually-hidden" type="submit" tabindex="-1">Поиск</button>
       </form>
      </div>
      <div class="actions-login">
       <a class="actions-button" href="#">Вход</a>
-      <form class="actions-login-form" method="get" action="https://echo.htmlacademy.ru">
-       <input class="actions-login-form-item" type="email" name="actions-login" id="user-login" placeholder="Электронная почта">
-       <label class="visually-hidden" for="user-login">Введите логин</label>
-       <input class="actions-login-form-item" type="password" name="actions-password" id="user-password" placeholder="Пароль">
-       <label class="visually-hidden" for="user-password">Введите пароль</label>
-       <button class="button actions-login-button" type="submit">Войти</button>
-       <a href="#" class="link">Забыли пароль?</a>
-       <a href="#" class="link">Новая регистрация</a>
+      <form class="actions-login-form" method="post" action="https://echo.htmlacademy.ru">
+       <p class="field actions-login-field">
+        <input class="field-input-login" type="email" name="actions-login" id="user-login" placeholder="Электронная почта" tabindex="-1">
+        <label class="visually-hidden field-label-login" for="user-login">Введите логин</label>
+       </p>
+       <p class="field actions-password-field">
+        <input class="field-input-password" type="password" name="actions-password" id="user-password" placeholder="Пароль" tabindex="-1">
+        <label class="visually-hidden field-label-password" for="user-password">Введите пароль</label>
+       </p>
+       <button class="button actions-login-button" type="submit" tabindex="-1">Войти</button>
+       <a class="link" href="#" tabindex="-1">Забыли пароль?</a>
+       <a class="link" href="#" tabindex="-1">Новая регистрация</a>
       </form>
      </div>
      <div class="actions-cart">
-      <a class="actions-button" href="#">Корзина</a> <!-- Убрал форму. В ТЗ прописано наведение только для каталога -->
+      <a class="actions-button" href="#">Корзина</a>
      </div>
     </div>
     <div class="contact-information">
@@ -69,13 +76,13 @@
        <h3 class="visually-hidden">Два по цене одного</h3>
        <img src="img/slider/slide-ice-cream-2.png" width="1065" height="859" alt="мороженое шоколадный пломбир и лимонный сорбет">
        <p class="slide-title">Шоколадный пломбир и лимонный сорбет</p>
-       <a class="button slide-button" href="#">Давайте оба!</a>
+       <a class="button slide-button" href="#" tabindex="-1">Давайте оба!</a>
       </section>
       <section class="slide">
        <h3 class="visually-hidden">Два по цене одного</h3>
        <img src="img/slider/slide-ice-cream-3.png" width="1079" height="854" alt="мороженое пломбир с помадкой и клубничный щербет">
        <p class="slide-title">Пломбир с помадкой и клубничный щербет</p>
-       <a class="button slide-button" href="#">Давайте оба!</a>
+       <a class="button slide-button" href="#" tabindex="-1">Давайте оба!</a>
       </section>
       <div class="slider-toggle">
        <input type="radio" name="slide" id="slide1" value="slide1" checked>
@@ -104,28 +111,28 @@
       <img class="hit-image" src="img/content/hit.svg" width="61" height="61" alt="Хит">
       <img class="product-image" src="img/content/catalog/product-1.jpg" width="267" height="267" alt="мороженое Gllacy сливочное с апельсиновым джемом и цитрусовой стружкой">
       <span class="product-price">310 Р<span class="product-mass">/кг</span></span>
-      <a class="button product-link" href="#">Быстрый просмотр</a>
+      <a class="button product-link" href="#" tabindex="-1">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочно-кофейное с кусочками шоколада</h3>
       <img class="hit-image" src="img/content/hit.svg" width="61" height="61" alt="Хит">
       <img class="product-image" src="img/content/catalog/product-2.jpg" width="267" height="267" alt="мороженое Gllacy сливочно-кофейное с кусочками шоколада">
       <span class="product-price">380 Р<span class="product-mass">/кг</span></span>
-      <a class="button product-link" href="#">Быстрый просмотр</a>
+      <a class="button product-link" href="#" tabindex="-1">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
       <img class="hit-image" src="img/content/hit.svg" width="61" height="61" alt="Хит">
       <img class="product-image" src="img/content/catalog/product-3.jpg" width="267" height="267" alt="мороженое Gllacy сливочно-клубничное с присыпкой из белого шоколада">
       <span class="product-price">355 Р<span class="product-mass">/кг</span></span>
-      <a class="button product-link" href="#">Быстрый просмотр</a>
+      <a class="button product-link" href="#" tabindex="-1">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочное крем-брюле с карамельной подливкой</h3>
       <img class="hit-image" src="img/content/hit.svg" width="61" height="61" alt="Хит">
       <img class="product-image" src="img/content/catalog/product-4.jpg" width="267" height="267" alt="мороженое Gllacy ливочное крем-брюле с карамельной подливкой">
       <span class="product-price">415 Р<span class="product-mass">/кг</span></span>
-      <a class="button product-link" href="#">Быстрый просмотр</a>
+      <a class="button product-link" href="#" tabindex="-1">Быстрый просмотр</a>
      </article>
     </section>
     <section class="advantages">
@@ -145,9 +152,11 @@
     <section class="dispatch">
      <h2 class="visually-hidden">Наша рассылка</h2>
      <p class="dispatch-item">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-     <form class="dispatch-form" method="get" action="https://echo.htmlacademy.ru">
-      <input class="dispatch-form-item" type="email" name="dispatch-email" id="dispatch-email" placeholder="Электронная почта">
-      <label class="visually-hidden" for="dispatch-email">Введите адрес электронной почты</label>
+     <form class="dispatch-form" method="post" action="https://echo.htmlacademy.ru">
+      <p class="field dispatch-field">
+       <input class="dispatch-input-field" type="email" name="dispatch-email" id="dispatch-email" placeholder="Электронная почта">
+       <label class="visually-hidden dispatch-label-field" for="dispatch-email">Введите адрес электронной почты</label>
+      </p>
       <button class="button dispatch-button" type="submit">Отправить</button>
      </form>
     </section>
@@ -164,16 +173,22 @@
      </dl>
      <button class="feedback-button button" type="button">Форма обратной связи</button>
      <div class="feedback-popup popup">
-      <form class="feedback-form" method="get" action="https://echo.htmlacademy.ru">
+      <button class="close-button" type="button" tabindex="-1">Закрыть форму обратной связи</button>
+      <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
        <p class="feedback-form-text">Мы обязательно вам ответим!</p>
-       <button class="feedback-form-button" type="button">Закрыть окно формы обратной связи</button>
-       <input class="feedback-form-item" type="text" name="feedback-user-name" id="feedback-user-name" placeholder="Как вас зовут?">
-       <label class="visually-hidden" for="feedback-user-name">Введите Ваше имя</label>
-       <input class="feedback-form-item" type="email" name="feedback-user-email" id="feedback-user-email" placeholder="Ваша почта для ответа?">
-       <label class="visually-hidden" for="feedback-user-email">Введите адрес Вашей электронной почты</label>
-       <textarea class="feedback-form-text" name="feedback-form-text" id="feedback-form-text" placeholder="Напишите что-нибудь..."></textarea>
-       <label class="visually-hidden" for="feedback-form-text">Введите Ваш Вопрос</label>
-       <button class="button" type="submit">Отправить</button>
+       <p class="field feedback-name-field">
+        <input class="field-input-name" type="text" name="feedback-user-name" id="feedback-user-name" placeholder="Как вас зовут?" tabindex="-1">
+        <label class="visually-hidden field-label-name" for="feedback-user-name">Как вас зовут?</label>
+       </p>
+       <p class="field feedback-email-field">
+        <input class="field-input-email" type="email" name="feedback-user-email" id="feedback-user-email" placeholder="Ваша почта для ответа?" tabindex="-1">
+        <label class="visually-hidden field-label-email" for="feedback-user-email">Ваша почта для ответа?</label>
+       </p>
+       <p class="field feedback-text-field">
+        <textarea class="field-textarea-text" name="feedback-form-text" id="feedback-form-text" placeholder="Напишите что-нибудь..." tabindex="-1"></textarea>
+        <label class="visually-hidden field-label-text" for="feedback-form-text">Напишите что-нибудь</label>
+       </p>
+       <button class="button" type="submit" tabindex="-1">Отправить</button>
       </form>
      </div>
     </section>
