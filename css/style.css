@@ -1,12 +1,44 @@
+/*глобальные стили*/
 body{
-/* блочная модель*/
- margin: 0;
- padding: 0;
-
-/* фон и шрифт */
  background-color: rgba(132, 157, 143, 1);
  color: rgba(255, 255, 255, 1);
  font-family: 'Roboto', Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+}
+
+a{
+ text-decoration: none;
+}
+
+.visually-hidden{
+ border: 0;
+ clip: rect(0 0 0 0);
+ height: 1px;
+ margin: -1px;
+ overflow: hidden;
+ padding: 0;
+ position: absolute;
+ width: 1px;
+}
+
+.button{
+ background-color: rgba(255, 77, 50, 1);
+ background-image: linear-gradient(90deg, rgba(231, 74, 53, 1), rgba(242, 104, 67, 1));
+ border: none;
+ box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+ color: rgba(255, 255, 255, 1);
+ cursor: pointer;
+ font-size: 18px;
+ font-weight: 700;
+ line-height: 24px;
+ text-decoration: none;
+}
+
+.main-menu, .sub-menu, .advantages-list, .filter-list{
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
 }
 
 /* не забыть убрать*/
@@ -14,77 +46,75 @@ body{
  outline: 2px solid rgba(244, 172, 162, 0.8);
 }
 
-.visually-hidden{
- position: absolute;
- overflow: hidden;
- clip: rect(0 0 0 0);
- height: 1px;
- width: 1px;
- margin: -1px;
- padding: 0;
- border: 0;
-}
 
-.main-menu, .sub-menu, .advantages-list, .filter-list{
-/*отступы*/
- margin: 0;
- padding: 0;
-/*прочее*/
- list-style-type: none;
-}
-
+/*header*/
 .main-menu-link{
-/*шрифты*/
-color: rgba(255, 255, 255, 1);
-font-size: 16px;
-font-weight: 700;
-line-height: 18px;
-text-decoration: none; /*переопределить*/
+ color: rgba(255, 255, 255, 1);
+ font-size: 16px;
+ font-weight: 700;
+ line-height: 18px;
+}
+
+.main-menu-link:hover{
+ background-color: rgba(247, 246, 243, 1);
+ color: rgba(50, 50, 50, 1);
+}
+
+.main-menu-link:active{
+ background-color: rgba(248, 247, 244, 1);
+ color: rgba(50, 50, 50, 1);
 }
 
 .main-menu-link-current{
-/*фон*/
  background-color: rgba(255, 77, 50, 1);
+ color: rgba(255, 255, 255, 1);
 }
 
 .sub-menu-item{
-/*фон и цвет*/
  background-color: rgba(248, 247, 244, 1);
  color: rgba(50, 50, 50, 1);
 }
 
 .sub-menu-link{
-/*шрифты*/
  color: rgba(50,  50, 50, 1);
+ display: block;
  font-size: 14px;
  font-weight: 400;
  line-height: 16px;
- text-decoration: none; /*переопределить*/
+}
+
+.sub-menu-link:hover{
+ background-color: rgba(251, 222, 215, 1);
+}
+
+.sub-menu-link:active{
+ background-color: rgba(246, 181, 165, 1);
+}
+
+.sub-menu-link-current{
+ background-color: rgba(208, 112, 88, 1);
+ color: rgba(255, 255, 255, 1);
+ display: block;
 }
 
 .sub-menu-item:first-child .sub-menu-link{
-/*шрифты*/
  font-weight: 700;
 }
 
 .actions-button{
-/*шрифты и фон*/
  background-color: rgba(255, 255, 255, 0.2);
  color: rgba(255, 255, 255, 1); 
  font-size: 14px;
  font-weight: 500;
  line-height: 16px;
- text-decoration: none; /*переопределить*/
 }
 
-.actions-button-cart{
-/*фон*/
- background-color: rgba(255, 255, 255, 1);
+.actions-button:hover, .actions-button-cart{
+ background-color: rgba(248, 247, 244, 1);
  color: rgba(50, 50, 50, 1);
 }
 
 .cart-table{
-/*шрифты и фон*/
  background-color: rgba(248, 247, 244, 1);
  color: rgba(50, 50, 50, 1); 
  font-size: 13px;
@@ -93,7 +123,6 @@ text-decoration: none; /*переопределить*/
 }
 
 .cart-table-price{
-/*цвет*/
  color: rgba(153, 153, 153, 1);
 }
 
@@ -103,108 +132,117 @@ text-decoration: none; /*переопределить*/
  line-height: 18px;
 }
 
-.button{
- /*фон и шрифты*/
- background-color: rgba(255, 77, 50, 1);
- background-image: linear-gradient(90deg, rgba(231, 74, 53, 1), rgba(242, 104, 67, 1));
- border: none;
- box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
- color: rgba(255, 255, 255, 1);
- font-size: 18px;
- font-weight: 700;
- line-height: 24px;
- text-decoration: none;
-}
-
 .actions-login .link{
-/*шрифты*/
+ border-bottom: 1px solid rgba(50, 50, 50, 0.3);
  color: rgba(50, 50, 50, 1);
  font-size: 13px;
  font-weight: 400;
  line-height: 24px;
 }
 
+.actions-login .link:hover, .actions-login .link:active{
+ border-bottom-color: rgba(232, 77, 55, 0.3);
+ color: rgba(232, 77, 55, 1);
+}
+
 .contact-information-worktime{
-/*шрифты*/
  font-size: 14px;
  font-weight: 700;
  line-height: 16px;
 }
 
 .contact-information-number{
-/*шрифты*/
  font-size: 21px;
  font-weight: 700;
  line-height: 24px;
 }
 
-.breadcrumbs-link{
-/*шрифт*/
+.breadcrumbs .link{
  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
  color: rgba(255, 255, 255, 1);
  font-size: 14px;
  font-weight: 400;
  line-height: 16px;
- text-decoration: none;
 }
 
-.breadcrumbs-link:last-child{
+.breadcrumbs-link:hover, .breadcrumbs-link:active{
+ color: rgba(255, 188, 158, 1);
+ border-bottom-color: rgba(255, 188, 158, 0.3);
+}
+
+.breadcrumbs .breadcrumbs-link-current{
  border: none;
 }
 
-/*main*/
-.main-title{
-/*шрифты*/
- font-size: 35px;
- font-weight: 700;
- line-height: 41px;
+
+/*footer*/
+.social-btn, .footer-col .link, .footer-col span{
+ border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+ color: rgba(255, 255, 255, 1);
+ font-size: 12px;
+ font-weight: 400;
+ line-height: 18px;
 }
 
+.footer-col .link:hover, .footer-col .link:active{
+ color: rgba(255, 188, 158, 1);
+ border-bottom-color: rgba(255, 188, 158, 0.3);
+}
+
+
+.footer-col:nth-child(2) .link:first-child{
+ font-size: 13px;
+ font-weight: 700;
+}
+
+.footer-col:last-child span{
+ border: none;
+}
+
+
+/*main*/
+/*index*/
+/*слайдер*/
 .slide-title{
-/*шрифты*/
  font-size: 60px;
  font-weight: 700;
  line-height: 60.35px;
 }
 
 .slide-button{
-/*шрифты*/
  font-size: 32px;
  line-height: 44px;
 }
 
-.banner:first-of-type{
-/*фон и шрифт*/
- background-color: rgba(132, 0, 17, 1);
- background-image: url("../img/background/bg-raspberry.jpg");
+/*баннеры*/
+.banner{
  background-repeat: no-repeat;
  color: rgba(255, 255, 255, 1);
+ font-weight: 700;
+}
+
+.banner:first-of-type{
+ background-color: rgba(132, 0, 17, 1);
+ background-image: url("../img/background/bg-raspberry.jpg");
 }
 
 .banner:last-of-type{
-/*фон и шрифт*/
  background-color: rgba(35, 10, 4, 1);
  background-image: url("../img/background/bg-chocolate.jpg");
- background-repeat: no-repeat;
- color: rgba(255, 255, 255, 1);
 }
 
 .banner-title{
-/*шрифт*/
  font-size: 35px;
- font-weight: 700;
  line-height: 41px;
 }
 
 .banner-item{
-/*шрифт*/
  font-size: 18px;
- font-weight: 700;
  line-height: 22px;
 }
 
+/*товары - общие стили*/
 .product-title{
-/*шрифт*/
  font-size: 16px;
  font-weight: 500;
  line-height: 22px;
@@ -212,21 +250,19 @@ text-decoration: none; /*переопределить*/
 }
 
 .product-price{
-/*шрифт*/
  font-size: 45px;
  font-weight: 700;
  line-height: 45px;
 }
 
 .product-mass{
-/*шрифт*/
  font-size: 30px;
  font-weight: 700;
  line-height: 45px;
 }
 
+/*преимущества*/
 .advantages{
-/*фон и шрифт*/
  background-color: rgba(240, 213, 170, 1);
  background-image: url("../img/background/bg-wafer.jpg");
  background-repeat: repeat;
@@ -234,21 +270,19 @@ text-decoration: none; /*переопределить*/
 }
 
 .advantages-title{
-/*шрифт*/
  font-size: 24px;
  font-weight: 500;
  line-height: 30px;
 }
 
 .advantages-item{
-/*шрифт*/
  font-size: 16px;
  font-weight: 400;
  line-height: 22px;	
 }
 
+/*блог*/
 .blog-teaser{
-/*фон и шрифт*/
  background-color: rgba(255, 255, 255, 1);
  background-image: url("../img/background/bg-strawberry.jpg");
  background-repeat: no-repeat;
@@ -256,15 +290,12 @@ text-decoration: none; /*переопределить*/
 }
 
 .blog-teaser-title{
-/*шрифт*/
  font-size: 16px;
  font-weight: 500;
  line-height: 22px;
 }
 
 .blog-teaser-link{
-/*шрифт*/
- border-bottom: 2px solid rgba(50, 50, 50, 1);
  color: rgba(50, 50, 50, 1);
  font-size: 24px;
  font-weight: 700;
@@ -272,8 +303,8 @@ text-decoration: none; /*переопределить*/
  text-decoration: none;	
 }
 
+/*рассылка*/
 .dispatch{
-/*фон и шрифт*/
  background-color: rgba(255, 255, 255, 1);
  background-image: url("../img/background/bg-post.svg");
  background-repeat: no-repeat;
@@ -281,81 +312,62 @@ text-decoration: none; /*переопределить*/
 }
 
 .dispatch-background{
-/*фон и шрифт*/
  background-color: rgba(248, 247, 244, 1);
  color: rgba(90, 90, 90, 1);
 }
 
 .dispatch-item{
-/*шрифт*/
  font-size: 16px;
  font-weight: 400;
  line-height: 22px;
 }
 
+/*обратная связь*/
 .feedback{
-/*фон и шрифт*/
  background-color: rgba(254, 254, 254, 1);
  color: rgba(50, 50, 50, 1);
 }
 
 .feedback-contacts-term{
-/*шрифт*/
  font-size: 14px;
  font-weight: 400;
  line-height: 20px;
  }
 
 .feedback-contacts-value{
-/*шрифт*/
  font-size: 18px;
  font-weight: 700;
  line-height: 24px;	
 }
 
 .feedback-form-text{
-/*шрифт*/
  font-size: 24px;
  font-weight: 500;
  line-height: 28px;
 }
 
-/*footer*/
-.social-btn, .footer-col .link, .footer-col span{
-/*шрифт*/
-border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-color: rgba(255, 255, 255, 1);
-font-size: 12px;
-font-weight: 400;
-line-height: 18px;
-text-decoration: none;
-}
 
-.footer-col:nth-child(2) .link:first-child{
-/*шрифт*/
-font-size: 13px;
-font-weight: 700;
-}
-
-.footer-col:last-child span{
- border: none;
-}
-
+/*main*/
 /*catalog*/
+.main-title{
+ font-size: 35px;
+ font-weight: 700;
+ line-height: 41px;
+}
+
+/*фильтр*/
 .filter{
  background-color: rgba(255, 255, 255, 0.2);
  border: none;
 }
 
 .filter-legend{
-/*шрифт*/
  font-size: 14px;
  font-weight: 500;
  line-height: 16px;
 }
 
 .option-label-radio, .option-label{
-/*шрифт*/
  font-size: 16px;
  font-weight: 500;
  line-height: 18px;
@@ -370,13 +382,12 @@ font-weight: 700;
  line-height: 18px;
 }
 
+/*пагинатор*/
 .paginator-link{
-/*шрифт*/
  color: rgba(255, 255, 255, 1);
  font-size: 16px;
  font-weight: 500;
  line-height: 18px;
- text-decoration: none;
 }
 
 .paginator-link-disabled{
