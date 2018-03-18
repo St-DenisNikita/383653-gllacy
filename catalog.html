@@ -31,29 +31,33 @@
     <div class="actions">
      <div class="actions-search">
       <a class="actions-button" href="#">Поиск</a>
-      <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
-       <p class="field actions-search-field">
-        <input class="field-input-search" type="search" name="actions-search" id="actions-search" placeholder="Что ищем?">
-        <label class="visually-hidden field-label-search" for="actions-search">Поиск</label>
-       </p>
-       <button class="visually-hidden" type="submit">Поиск</button>
-      </form>
+      <div class="wrap-field">
+       <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
+        <p class="field actions-search-field">
+         <input class="field-input-search" type="search" name="actions-search" id="actions-search" required>
+         <label class="field-label-search" for="actions-search">Что ищем?</label>
+        </p>
+        <button class="visually-hidden" type="submit">Поиск</button>
+       </form>
+      </div>
      </div>
      <div class="actions-login">
       <a class="actions-button" href="#">Вход</a>
-      <form class="actions-login-form" method="post" action="https://echo.htmlacademy.ru">
-       <p class="field actions-login-field">
-        <input class="field-input-login" type="email" name="actions-login" id="user-login" placeholder="Электронная почта">
-        <label class="visually-hidden field-label-login" for="user-login">Введите логин</label>
-       </p>
-       <p class="field actions-password-field">
-        <input class="field-input-password" type="password" name="actions-password" id="user-password" placeholder="Пароль">
-        <label class="visually-hidden field-label-password" for="user-password">Введите пароль</label>
-       </p>
-       <button class="button actions-login-button" type="submit">Войти</button>
-       <a class="link" href="#">Забыли пароль?</a>
-       <a class="link" href="#">Новая регистрация</a>
-      </form>
+      <div class="wrap-field">
+       <form class="actions-login-form" method="post" action="https://echo.htmlacademy.ru">
+        <p class="field actions-login-field">
+         <input class="field-input-login" type="email" name="actions-login" id="user-login" required>
+         <label class="field-label-login" for="user-login">Электронная почта</label>
+        </p>
+        <p class="field actions-password-field">
+         <input class="field-input-password" type="password" name="actions-password" id="user-password" required>
+         <label class="field-label-password" for="user-password">Пароль</label>
+        </p>
+        <button class="button actions-login-button" type="submit">Войти</button>
+        <a class="link" href="#">Забыли пароль?</a>
+        <a class="link" href="#">Новая регистрация</a>
+       </form>
+      </div>
      </div>
      <div class="actions-cart">
       <a class="actions-button actions-button-cart" href="#">2 товара</a>
@@ -245,7 +249,7 @@
      </article>
     </section>
     <div class="paginator">
-     <a class="paginator-link paginator-link-prev paginator-link-disabled" href="#" disabled>Назад</a>
+     <a class="paginator-link paginator-link-prev paginator-link-disabled" href="#">Назад</a>
      <a class="paginator-link paginator-link-current" href="#">1</a>
      <a class="paginator-link" href="#">2</a>
      <a class="paginator-link" href="#">3</a>

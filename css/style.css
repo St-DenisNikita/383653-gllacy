@@ -23,10 +23,12 @@ a{
 }
 
 .button{
- background-color: rgba(255, 77, 50, 1);
- background-image: linear-gradient(90deg, rgba(231, 74, 53, 1), rgba(242, 104, 67, 1));
+ background-color: rgba(202, 56, 36, 1);
  border: none;
- box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+ border-bottom-left-radius: 10% 50%;
+ border-bottom-right-radius: 10% 50%;
+ border-top-left-radius: 10% 50%;
+ border-top-right-radius: 10% 50%;
  color: rgba(255, 255, 255, 1);
  cursor: pointer;
  font-size: 18px;
@@ -35,15 +37,26 @@ a{
  text-decoration: none;
 }
 
-.main-menu, .sub-menu, .advantages-list, .filter-list{
+.button:focus{
+ outline: 2px solid rgba(244, 172, 162, 0.8);
+}
+
+.button:hover{
+ background-color: rgba(255, 133, 102, 1);
+}
+
+.button:active{
+ background-color: rgba(250, 70, 47, 1);
+ outline: none;
+}
+
+.main-menu,
+.sub-menu,
+.advantages-list, 
+.filter-list{
  list-style-type: none;
  margin: 0;
  padding: 0;
-}
-
-/* не забыть убрать*/
-*:focus{
- outline: 2px solid rgba(244, 172, 162, 0.8);
 }
 
 
@@ -63,6 +76,7 @@ a{
 .main-menu-link:active{
  background-color: rgba(248, 247, 244, 1);
  color: rgba(50, 50, 50, 1);
+ outline: none;
 }
 
 .main-menu-link-current{
@@ -89,6 +103,7 @@ a{
 
 .sub-menu-link:active{
  background-color: rgba(246, 181, 165, 1);
+ outline: none;
 }
 
 .sub-menu-link-current{
@@ -97,7 +112,10 @@ a{
  display: block;
 }
 
-.sub-menu-item:first-child .sub-menu-link{
+.sub-menu-item:first-child .sub-menu-link,
+.sub-menu-item:first-child .sub-menu-link:hover,
+.sub-menu-item:first-child .sub-menu-link:active{
+ background-color: rgba(248, 247, 244, 1);
  font-weight: 700;
 }
 
@@ -346,6 +364,63 @@ a{
  line-height: 28px;
 }
 
+/*попап*/
+.wrap-field{
+ background-color: rgba(248, 247, 244, 1);
+}
+
+input[class^="field-input"],
+.field-textarea-text{
+ border: 1px solid rgba(178, 178, 178, 1);
+}
+
+label[class^="field-label"]{
+ color: rgba(153, 153, 153, 1);
+ font-family: 'Roboto', Arial, sans-serif;
+ font-size: 16px;
+ font-weight: 400;
+ line-height: 24px;
+}
+
+label[class$="-search"],
+label[class$="-login"],
+label[class$="-password"]{
+ font-size: 14px;
+}
+
+input[class^="field-input"]:hover,
+.field-textarea-text:hover{
+ border: 2px solid rgba(154, 154, 154, 1)
+}
+
+input[class^="field-input"]:focus,
+.field-textarea-text:focus{
+ border: 2px solid rgba(46, 136, 228, 1)
+}
+
+input[class^="field-input"]:focus + label[class^="field-label"],
+.field-textarea-text:focus + label[class^="field-label"]{
+color: rgba(91, 157, 223, 1);
+font-size: 11px;
+font-weight: 400;
+line-height: 13px;
+outline: none;
+}
+
+input[class^="field-input"]:valid, 
+.field-textarea-text:valid{
+ border: 1px solid rgba(178, 178, 178, 1);
+ outline: none;
+}
+
+input[class^="field-input"]:valid + label[class^="field-label"],
+.field-textarea-text:valid + label[class^="field-label"]{
+color: rgba(153, 153, 153, 1);
+font-size: 11px;
+font-weight: 400;
+line-height: 13px;
+}
+
 
 /*main*/
 /*catalog*/
@@ -375,11 +450,25 @@ a{
 
 .filter-button{
  border: 2px solid rgba(255, 255, 255, 1);
+ border-bottom-left-radius: 10% 50%;
+ border-bottom-right-radius: 10% 50%;
+ border-top-left-radius: 10% 50%;
+ border-top-right-radius: 10% 50%;
  background-color: rgba(255, 255, 255, 0.2);
  color: rgba(255, 255, 255, 1);
  font-size: 16px;
  font-weight: 500;
  line-height: 18px;
+}
+
+.filter-button:hover{
+ background-color: rgba(255, 255, 255, 1);
+ color: rgba(50, 50, 50, 1);
+}
+
+.filter-button:active{
+ background-color: rgba(237, 237, 237, 1);
+ color: rgba(50, 50, 50, 1);
 }
 
 /*пагинатор*/
@@ -390,11 +479,24 @@ a{
  line-height: 18px;
 }
 
-.paginator-link-disabled{
+.paginator-link:hover{
+ background-color: rgba(255, 255, 255, 0.2);
+}
+
+.paginator-link:active{
+ background-color: rgba(255, 255, 255, 1);
+ color: rgba(50, 50, 50, 1);
+}
+
+.paginator-link-disabled, 
+.paginator-link-disabled:hover, 
+.paginator-link-disabled:active{
+ background-color: rgba(255, 255, 255, 0);
  color: rgba(255, 255, 255, 0.2);
 }
 
-.paginator-link-current{
+.paginator-link-current, 
+.paginator-link-current:hover{
  background-color: rgba(255, 255, 255, 1);
  color: rgba(50, 50, 50, 1);
 }
