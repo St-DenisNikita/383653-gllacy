@@ -25,47 +25,49 @@
 							</ul>
       </li>
       <li class="main-menu-item"><a class="main-menu-link" href="#">Доставка и оплата</a></li>
-      <li class="main-menu-item"><a class="main-menu-link" href="#">О компании</a></li>
+      <li class="main-menu-item"><a class="main-menu-link" href="#">О Компании</a></li>
      </ul>		
     </nav>
-    <div class="actions">
-     <div class="actions-search">
-      <a class="actions-button" href="#">Поиск</a>
-      <div class="wrap-field">
-       <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
-        <p class="field actions-search-field">
-         <input class="field-input" type="search" name="actions-search" id="actions-search" required>
-         <label class="field-label" for="actions-search">Что ищем?</label>
-        </p>
-        <button class="visually-hidden" type="submit">Поиск</button>
-       </form>
+    <div class="header-column-right">
+     <div class="actions">
+      <div class="actions-search">
+       <a class="actions-button actions-button-search" href="#"><span class="visually-hidden">Поиск</span></a>
+       <div class="wrap-field">
+        <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
+         <p class="field actions-search-field">
+          <input class="field-input" type="search" name="actions-search" id="actions-search" required>
+          <label class="field-label" for="actions-search">Что ищем?</label>
+         </p>
+         <button class="visually-hidden" type="submit">Поиск</button>
+        </form>
+       </div>
       </div>
-     </div>
-     <div class="actions-login">
-      <a class="actions-button" href="#">Вход</a>
-      <div class="wrap-field">
-       <form class="actions-login-form" method="post" action="https://echo.htmlacademy.ru">
-        <p class="field actions-login-field">
-         <input class="field-input" type="email" name="actions-login" id="user-login" required>
-         <label class="field-label" for="user-login">Электронная почта</label>
-        </p>
-        <p class="field actions-password-field">
-         <input class="field-input" type="password" name="actions-password" id="user-password" required>
-         <label class="field-label" for="user-password">Пароль</label>
-        </p>
-        <button class="button actions-login-button" type="submit">Войти</button>
-        <a class="link" href="#">Забыли пароль?</a>
-        <a class="link" href="#">Новая регистрация</a>
-       </form>
+      <div class="actions-login">
+       <a class="actions-button actions-button-login" href="#">Вход</a>
+       <div class="wrap-field">
+        <form class="actions-login-form" method="post" action="https://echo.htmlacademy.ru">
+         <p class="field actions-login-field">
+          <input class="field-input" type="email" name="actions-login" id="user-login" required>
+          <label class="field-label" for="user-login">Электронная почта</label>
+         </p>
+         <p class="field actions-password-field">
+          <input class="field-input" type="password" name="actions-password" id="user-password" required>
+          <label class="field-label" for="user-password">Пароль</label>
+         </p>
+         <button class="button actions-login-button" type="submit">Войти</button>
+         <a class="link" href="#">Забыли пароль?</a>
+         <a class="link" href="#">Новая регистрация</a>
+        </form>
+       </div>
       </div>
-     </div>
-     <div class="actions-cart">
-      <a class="actions-button" href="#">Пусто</a>
-     </div>
+      <div class="actions-cart">
+       <a class="actions-button actions-button-empty-cart" href="#">Пусто</a>
+      </div>
     </div>
     <div class="contact-information">
      <p class="contact-information-worktime">С 10 до 20, ежедневно</p>
      <p class="contact-information-number">8 812 450-25-25</p>
+    </div>
     </div>
    </header>
    <main>
@@ -151,23 +153,25 @@
       <li class="advantages-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
      </ul>
     </section>
-    <article class="blog-teaser">
-     <h2 class="blog-teaser-title">Новое в нашем блоге</h2>
-     <a class="blog-teaser-link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
-    </article>
-    <section class="dispatch">
-     <div class="dispatch-background">
-      <h2 class="visually-hidden">Наша рассылка</h2>
-      <p class="dispatch-item">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <form class="dispatch-form" method="post" action="https://echo.htmlacademy.ru">
-       <p class="field dispatch-field">
-        <input class="dispatch-input-field" type="email" name="dispatch-email" id="dispatch-email" placeholder="Электронная почта">
-        <label class="dispatch-label-field" for="dispatch-email">Введите адрес электронной почты</label>
-       </p>
-       <button class="button dispatch-button" type="submit">Отправить</button>
-      </form>
-     </div>
-    </section>
+    <div class="row">
+     <article class="blog-teaser">
+      <h2 class="blog-teaser-title">Новое в нашем блоге</h2>
+      <a class="blog-teaser-link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+     </article>
+     <section class="dispatch">
+      <div class="dispatch-background">
+       <h2 class="visually-hidden">Наша рассылка</h2>
+       <p class="dispatch-item">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+       <form class="dispatch-form" method="post" action="https://echo.htmlacademy.ru">
+        <p class="field dispatch-field">
+         <input class="dispatch-input-field" type="email" name="dispatch-email" id="dispatch-email" placeholder="Электронная почта">
+         <label class="dispatch-label-field" for="dispatch-email">Введите адрес электронной почты</label>
+        </p>
+        <button class="button dispatch-button" type="submit">Отправить</button>
+       </form>
+      </div>
+     </section>
+    </div>
     <section class="map">
      <img src="img/content/map.jpg" width="1200" height="640" alt="карта, как нас найти">
     </section>
@@ -181,9 +185,9 @@
      </dl>
      <button class="feedback-button button" type="button">Форма обратной связи</button>
      <div class="feedback-popup popup">
-      <button class="close-button" type="button">Закрыть форму обратной связи</button>
       <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
        <div class="wrap-field">
+        <button class="close-button" type="button">Закрыть форму обратной связи</button>
         <p class="feedback-form-text">Мы обязательно вам ответим!</p>
         <p class="field feedback-name-field">
          <input class="field-input" type="text" name="feedback-user-name" id="feedback-user-name" required>

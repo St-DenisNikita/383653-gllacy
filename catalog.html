@@ -11,91 +11,95 @@
   <div class="container">
    <header class="main-header">
     <div class="logo">
-     <a href="index.html"><img src="img/content/logo.svg" width="154" height="64" alt="Логотип"></a>
+     <img src="img/content/logo.svg" width="154" height="64" alt="Логотип">
     </div>
     <nav class="nav-main">
      <ul class="main-menu">
       <li class="main-menu-item"><a class="main-menu-link-current" href="#">Каталог</a>
-       <ul class="sub-menu">
-        <li class="sub-menu-item"><a class="sub-menu-link" href="#">Новинки</a></li>
-        <li class="sub-menu-item"><a class="sub-menu-link-current" href="#">Сливочное</a></li>
-        <li class="sub-menu-item"><a class="sub-menu-link" href="#">Щербеты</a></li>
-        <li class="sub-menu-item"><a class="sub-menu-link" href="#">Фруктовый лед</a></li>
-        <li class="sub-menu-item"><a class="sub-menu-link" href="#">Мелорин</a></li>
-       </ul>
+        <ul class="sub-menu">
+         <li class="sub-menu-item"><a class="sub-menu-link" href="#">Новинки</a></li>
+         <li class="sub-menu-item"><a class="sub-menu-link-current" href="#">Сливочное</a></li>
+         <li class="sub-menu-item"><a class="sub-menu-link" href="#">Щербеты</a></li>
+         <li class="sub-menu-item"><a class="sub-menu-link" href="#">Фруктовый лед</a></li>
+         <li class="sub-menu-item"><a class="sub-menu-link" href="#">Мелорин</a></li>
+							</ul>
       </li>
       <li class="main-menu-item"><a class="main-menu-link" href="#">Доставка и оплата</a></li>
-      <li class="main-menu-item"><a class="main-menu-link" href="#">О компании</a></li>
+      <li class="main-menu-item"><a class="main-menu-link" href="#">О Компании</a></li>
      </ul>		
     </nav>
-    <div class="actions">
-     <div class="actions-search">
-      <a class="actions-button" href="#">Поиск</a>
-      <div class="wrap-field">
-       <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
-        <p class="field actions-search-field">
-         <input class="field-input" type="search" name="actions-search" id="actions-search" required>
-         <label class="field-label" for="actions-search">Что ищем?</label>
-        </p>
-        <button class="visually-hidden" type="submit">Поиск</button>
-       </form>
+    <div class="header-column-right">
+     <div class="actions">
+      <div class="actions-search">
+       <a class="actions-button actions-button-search" href="#"><span class="visually-hidden">Поиск</span></a>
+       <div class="wrap-field">
+        <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
+         <p class="field actions-search-field">
+          <input class="field-input" type="search" name="actions-search" id="actions-search" required>
+          <label class="field-label" for="actions-search">Что ищем?</label>
+         </p>
+         <button class="visually-hidden" type="submit">Поиск</button>
+        </form>
+       </div>
+      </div>
+      <div class="actions-login">
+       <a class="actions-button actions-button-login" href="#">Вход</a>
+       <div class="wrap-field">
+        <form class="actions-login-form" method="post" action="https://echo.htmlacademy.ru">
+         <p class="field actions-login-field">
+          <input class="field-input" type="email" name="actions-login" id="user-login" required>
+          <label class="field-label" for="user-login">Электронная почта</label>
+         </p>
+         <p class="field actions-password-field">
+          <input class="field-input" type="password" name="actions-password" id="user-password" required>
+          <label class="field-label" for="user-password">Пароль</label>
+         </p>
+         <button class="button actions-login-button" type="submit">Войти</button>
+         <a class="link" href="#">Забыли пароль?</a>
+         <a class="link" href="#">Новая регистрация</a>
+        </form>
+       </div>
+      </div>
+      <div class="actions-cart">
+       <a class="actions-button actions-button-cart" href="#">2 товара</a>
+       <div class="wrap-field">
+      	 <form class="actions-form-cart" method="post" action="https://echo.htmlacademy.ru">
+         <table class="cart-table"> <!-- начало таблицы -->
+          <tr class="cart-table-row-name visually-hidden">
+	          <th class="cart-table-cell-name">Удаление товара из корзины</th>
+	          <th class="cart-table-cell-name">Изображение товара</th>
+	          <th class="cart-table-cell-name">Название товара</th>
+	          <th class="cart-table-cell-name">Количество и цена товара</th>
+	          <th class="cart-table-cell-name">Стоимость товара</th>
+          </tr>
+          <tr class="cart-table-row">
+ 	         <td class="cart-table-cell"><button class="cart-table-button" type="button">Удалить товар из корзины</button></td>
+ 	         <td class="cart-table-cell"><img class="cart-table-img" src="img/content/catalog/product-1.jpg" width="33" height="33" alt="мороженое Gllacy сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
+ 	         <td class="cart-table-cell"><span class="cart-table-product">Пломбир с апельсиновым джемом</span></td>
+ 	         <td class="cart-table-cell"><span class="cart-table-quantity">1,5 кг &#215;</span><span class="cart-table-price"> 200 руб.</span></td>
+ 	         <td class="cart-table-cell"><span class="cart-table-cost">300 руб.</span></td>
+          </tr>
+          <tr class="cart-table-row">
+ 	         <td class="cart-table-cell"><button class="cart-table-button" type="button">Удалить товар из корзины</button></td>
+ 	         <td class="cart-table-cell"><img class="cart-table-img" src="img/content/catalog/product-3.jpg" width="33" height="33" alt="мороженое Gllacy сливочно-клубничное с присыпкой из белого шоколада"></td>
+ 	         <td class="cart-table-cell"><span class="cart-table-product">Клубничный пломбир с присыпкой из белого шоколада</span></td>
+ 	         <td class="cart-table-cell"><span class="cart-table-quantity">1,5 кг &#215;</span><span class="cart-table-price"> 300 руб.</span></td>
+ 	         <td class="cart-table-cell"><span class="cart-table-cost">450 руб.</span></td>
+          </tr>
+          <tr class="cart-table-row-total">
+ 	         <td class="cart-table-total" colspan="4">Итого:</td>
+ 	         <td class="cart-table-total-cost">750 руб.</td>
+          </tr>
+         </table> <!-- конец таблицы -->
+         <button type="submit" class="button">Оформить заказ</button>
+        </form>
+       </div>
       </div>
      </div>
-     <div class="actions-login">
-      <a class="actions-button" href="#">Вход</a>
-      <div class="wrap-field">
-       <form class="actions-login-form" method="post" action="https://echo.htmlacademy.ru">
-        <p class="field actions-login-field">
-         <input class="field-input" type="email" name="actions-login" id="user-login" required>
-         <label class="field-label" for="user-login">Электронная почта</label>
-        </p>
-        <p class="field actions-password-field">
-         <input class="field-input" type="password" name="actions-password" id="user-password" required>
-         <label class="field-label" for="user-password">Пароль</label>
-        </p>
-        <button class="button actions-login-button" type="submit">Войти</button>
-        <a class="link" href="#">Забыли пароль?</a>
-        <a class="link" href="#">Новая регистрация</a>
-       </form>
-      </div>
-     </div>
-     <div class="actions-cart">
-      <a class="actions-button actions-button-cart" href="#">2 товара</a>
-      <form class="actions-form-cart" method="post" action="https://echo.htmlacademy.ru">
-       <table class="cart-table"> <!-- начало таблицы -->
-        <tr class="cart-table-row-name visually-hidden">
-	        <th class="cart-table-cell-name">Удаление товара из корзины</th>
-	        <th class="cart-table-cell-name">Изображение товара</th>
-	        <th class="cart-table-cell-name">Название товара</th>
-	        <th class="cart-table-cell-name">Количество и цена товара</th>
-	        <th class="cart-table-cell-name">Стоимость товара</th>
-        </tr>
-        <tr class="cart-table-row">
- 	       <td class="cart-table-cell"><button class="cart-table-button" type="button">Удалить товар из корзины</button></td>
- 	       <td class="cart-table-cell"><img class="cart-table-img" src="img/content/catalog/product-1.jpg" width="33" height="33" alt="мороженое Gllacy сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
- 	       <td class="cart-table-cell"><span class="cart-table-product">Пломбир с апельсиновым джемом</span></td>
- 	       <td class="cart-table-cell"><span class="cart-table-quantity">1,5 кг &#215;</span><span class="cart-table-price"> 200 руб.</span></td>
- 	       <td class="cart-table-cell"><span class="cart-table-cost">300 руб.</span></td>
-        </tr>
-        <tr class="cart-table-row">
- 	       <td class="cart-table-cell"><button class="cart-table-button" type="button">Удалить товар из корзины</button></td>
- 	       <td class="cart-table-cell"><img class="cart-table-img" src="img/content/catalog/product-3.jpg" width="33" height="33" alt="мороженое Gllacy сливочно-клубничное с присыпкой из белого шоколада"></td>
- 	       <td class="cart-table-cell"><span class="cart-table-product">Клубничный пломбир с присыпкой из белого шоколада</span></td>
- 	       <td class="cart-table-cell"><span class="cart-table-quantity">1,5 кг &#215;</span><span class="cart-table-price"> 300 руб.</span></td>
- 	       <td class="cart-table-cell"><span class="cart-table-cost">450 руб.</span></td>
-        </tr>
-        <tr class="cart-table-row-total">
- 	       <td class="cart-table-total" colspan="4">Итого:</td>
- 	       <td class="cart-table-total-cost">750 руб.</td>
-        </tr>
-       </table> <!-- конец таблицы -->
-       <button type="submit" class="button">Оформить заказ</button>
-      </form>
-     </div>
-    </div>
-    <div class="contact-information">
+     <div class="contact-information">
      <p class="contact-information-worktime">С 10 до 20, ежедневно</p>
      <p class="contact-information-number">8 812 450-25-25</p>
+     </div>
     </div>
     <div class="breadcrumbs">
      <a class="link breadcrumbs-link" href="index.html">Главная</a>
