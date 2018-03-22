@@ -5,6 +5,10 @@ body{
  padding: 0;
 }
 
+main{
+ position: relative;
+}
+
 a{
  text-decoration: none;
 }
@@ -22,7 +26,10 @@ a{
 
 .container{
  background-color: rgb(132, 157, 143);
+ box-sizing: border-box;
  color: rgb(255, 255, 255);
+ padding-left: 27px;
+ padding-right: 27px;
  width: 1200px;
 }
 
@@ -125,29 +132,12 @@ a{
 /*сетка*/
 .main-header{
  display: flex;
+ position: relative;
  width: 100%;
-
- outline: 4px solid rgba(255, 185, 188, 0.8);
 }
 
 .logo{
- margin-left: 27px;
  margin-top: 9px;
-
- outline: 4px solid rgba(205, 245, 88, 0.8);
-}
-
-.header-column-right{
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- margin-left: auto;
- margin-right: 27px;
- margin-top: 28px;
- order: 3;
- width: 261px;
-
- outline: 4px solid lightblue;
 }
 
 .wrap-field,
@@ -158,16 +148,16 @@ a{
 /*микросетки*/
 .main-menu{
  display: flex;
- justify-content: space-araund;
  flex-wrap: wrap;
+ justify-content: flex-start;
  margin-left: 9px;
- margin-top: 28px;
- width: 394px;
-
- outline: 4px solid rgba(215, 145, 88, 0.8);
+ margin-top: 29px;
+ width: 700px;
 }
 
 .main-menu-item{
+ position: relative;
+ top: -1px;
  margin-bottom: 20px;
 }
 
@@ -176,8 +166,9 @@ a{
  flex-wrap: wrap;
  justify-content: space-between;
  margin-bottom: 10px;
-
- outline: 4px solid lightgreen;
+ margin-left: 22px;
+ margin-top: 28px;
+ width: 261px;
 }
 
 .actions-search{
@@ -196,7 +187,10 @@ a{
 }
 
 .contact-information{
- align-self: flex-end;
+ top: 72px;
+ right: 0px;
+ position: absolute;
+ z-index: 1;
 }
 
 .contact-information-worktime,
@@ -241,15 +235,16 @@ a{
 
 .main-menu-link-current{
  background-color: rgb(255, 77, 50);
- border-bottom-left-radius: 10% 50%;
- border-bottom-right-radius: 10% 50%;
- border-top-left-radius: 10% 50%;
- border-top-right-radius: 10% 50%;
+ border-bottom-left-radius: 20% 50%;
+ border-bottom-right-radius: 20% 50%;
+ border-top-left-radius: 20% 50%;
+ border-top-right-radius: 20% 50%;
  color: rgb(255, 255, 255);
  font-size: 16px;
  font-weight: 700;
  line-height: 18px;
- padding: 7px 14px;
+ padding: 5px 14px;
+ padding-bottom: 7px;
 }
 
 .sub-menu-item{
@@ -295,6 +290,7 @@ a{
  line-height: 16px;
  padding-bottom: 7px;
  padding-top: 7px;
+ position: relative;
 }
 
 .actions-button-search{
@@ -303,22 +299,65 @@ a{
  border-radius: 50%;
 }
 
+.actions-button-search::before{
+ background-image: url('../img/decoration/loupe.svg');
+ background-repeat: no-repeat;
+ bottom: 0;
+ content: "";
+ height: 17px;
+ left: 0;
+ margin: 7px;
+ position: absolute;
+ right: 0;
+ top: 0;
+ width: 17px;
+}
+
 .actions-button-login{
- padding-left: 44px;
- padding-right: 16px;
- border-bottom-left-radius: 20% 50%;
- border-bottom-right-radius: 20% 50%;
- border-top-left-radius: 20% 50%;
- border-top-right-radius: 20% 50%;
+ margin-left: 1px;
+ padding-left: 43px;
+ padding-right: 17px;
+ border-bottom-left-radius: 15% 50%;
+ border-bottom-right-radius: 15% 50%;
+ border-top-left-radius: 15% 50%;
+ border-top-right-radius: 15% 50%;
+}
+
+.actions-button-login::before{
+ background-image: url('../img/decoration/entrance.svg');
+ background-repeat: no-repeat;
+ bottom: 0;
+ content: "";
+ height: 19px;
+ left: 0;
+ margin: 6px 16px;
+ position: absolute;
+ right: 0;
+ top: 0;
+ width: 21px;
 }
 
 .actions-button-empty-cart{
  padding-left: 45px;
  padding-right: 34px;
- border-bottom-left-radius: 20% 50%;
- border-bottom-right-radius: 20% 50%;
- border-top-left-radius: 20% 50%;
- border-top-right-radius: 20% 50%;
+ border-bottom-left-radius: 15% 50%;
+ border-bottom-right-radius: 15% 50%;
+ border-top-left-radius: 15% 50%;
+ border-top-right-radius: 15% 50%;
+}
+
+.actions-button-empty-cart::before{
+ background-image: url('../img/decoration/basket.svg');
+ background-repeat: no-repeat;
+ bottom: 0;
+ content: "";
+ height: 20px;
+ left: 0;
+ margin: 6px 17px;
+ position: absolute;
+ right: 0;
+ top: 0;
+ width: 21px;
 }
 
 .actions-button:hover, .actions-button-cart{
@@ -368,13 +407,9 @@ a{
  font-weight: 700;
  line-height: 24px;
 }
-
 .breadcrumbs{
-	margin-left: -558px;
- margin-top: 95px;
- order: 1;
+ padding-top: 18px;
 }
-
 .breadcrumbs .link{
  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
  color: rgb(255, 255, 255);
@@ -397,9 +432,6 @@ a{
  display: flex;
  justify-content: space-between;
  width: 100%;
-}
-
-.footer-column{
 }
 
 .social-btn, .footer-col .link, .footer-col span{
@@ -453,12 +485,14 @@ a{
  display: flex;
  justify-content: space-between;
  width: 100%;
-
- outline: 4px solid yellow;
 }
 
 .banner{
  background-repeat: no-repeat;
+ border-bottom-left-radius: 3% 7%;
+ border-bottom-right-radius: 3% 7%;
+ border-top-left-radius: 3% 7%;
+ border-top-right-radius: 3% 7%;
  color: rgb(255, 255, 255);
  flex-basis: 560px;
  flex-wrap: wrap;
@@ -469,23 +503,37 @@ a{
 .banner:first-of-type{
  background-color: rgb(132, 0, 17);
  background-image: url("../img/background/bg-raspberry.jpg");
- margin-left: 27px;
 }
 
 .banner:last-of-type{
  background-color: rgb(35, 10, 4);
  background-image: url("../img/background/bg-chocolate.jpg");
- margin-right: 27px;
 }
 
 .banner-title{
  font-size: 35px;
  line-height: 41px;
+ margin: 0;
+ padding-left: 18px;
+ padding-top: 15px;
 }
 
 .banner-item{
  font-size: 18px;
  line-height: 22px;
+ margin: 0;
+ margin-bottom: 55px;
+ padding-left: 19px;
+ padding-top: 16px;
+}
+
+.banner-button{
+ margin-left: 374px;
+ padding: 11px 22px;
+}
+
+.banner:last-of-type .banner-button{
+ margin-left: 350px;
 }
 
 /*товары - общие стили*/
@@ -530,8 +578,6 @@ a{
  background-repeat: repeat;
  color: rgb(50, 50, 50);
  margin-bottom: 20px;
- margin-left: 27px;
- margin-right: 27px;
  width: 1146px;
 }
 
@@ -562,7 +608,6 @@ a{
  background-repeat: no-repeat;
  color: rgb(50, 50, 50);
  margin-bottom: 40px;
- margin-left: 27px;
  width: 560px;
 }
 
@@ -583,6 +628,13 @@ a{
 
 .map{
  width: 1200px;
+ padding: 0;
+ margin: 0;
+}
+
+.map img{
+ padding: 0;
+ margin: 0;
 }
 
 /*рассылка*/
@@ -592,7 +644,6 @@ a{
  background-repeat: no-repeat;
  color: rgb(90, 90, 90);
  margin-bottom: 40px;
- margin-right: 27px;
  padding: 5px 6px;
  width: 548px;
 }
@@ -612,9 +663,13 @@ a{
 /*обратная связь*/
 .feedback{
  background-color: rgb(254, 254, 254);
+ border-radius: 5%;
+ bottom: 277px;
+ right: 53px;
  box-sizing: border-box;
  color: rgb(50, 50, 50);
  min-height: 305px;
+ position: absolute;
  width: 302px;
 }
 
