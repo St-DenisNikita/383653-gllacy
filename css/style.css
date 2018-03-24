@@ -58,7 +58,6 @@ a{
  flex-basis: 100%;
 }
 
-.filters,
 .paginator{
  background-color: red;
 }
@@ -355,6 +354,9 @@ a{
  font-size: 35px;
  font-weight: 700;
  line-height: 41px;
+ margin: 0;
+ padding: 0;
+ padding-top: 3px;
  }
 
 .button{
@@ -726,11 +728,13 @@ a{
  .map{
  width: 1200px;
  border: none;
+ line-height: 0;
  padding: 0;
  margin: 0;
 }
 
 .map img{
+/* display: block;*/
  padding: 0;
  margin: 0;
 }
@@ -767,12 +771,17 @@ a{
 
 /*фильтр*/
 .filters{
- display: flex;
+ font-size: 0;
 }
 
 .filter{
  background-color: rgba(255, 255, 255, 0.2);
  border: none;
+ display: inline-block;
+ margin: 0;
+ margin-right: 16px;
+ padding: 0;
+ vertical-align: top;
 }
 
 .filter-form .filter:first-of-type{
@@ -801,6 +810,10 @@ a{
  line-height: 16px;
 }
 
+.filter-list{
+ display: flex;
+}
+
 .option-label-radio, .option-label{
  font-size: 16px;
  font-weight: 500;
@@ -814,7 +827,7 @@ a{
  border-top-left-radius: 10% 50%;
  border-top-right-radius: 10% 50%;
  background-color: rgba(255, 255, 255, 0.2);
- color: rgb(255, 255, 255, );
+ color: rgb(255, 255, 255);
  font-size: 16px;
  font-weight: 500;
  line-height: 18px;
@@ -831,8 +844,12 @@ a{
 }
 
 /*пагинатор*/
+.paginator{
+ text-align: right;
+}
+
 .paginator-link{
- color: rgba(255, 255, 255);
+ color: rgb(255, 255, 255);
  font-size: 16px;
  font-weight: 500;
  line-height: 18px;
