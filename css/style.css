@@ -7,6 +7,7 @@ body{
 
 main{
  position: relative;
+ margin: 0 auto;
 }
 
 a{
@@ -40,6 +41,7 @@ a{
  color: rgb(255, 255, 255);
  display: flex;
  flex-direction: column;
+ margin: 0 auto;
  padding-left: 27px;
  padding-right: 27px;
  width: 1200px;
@@ -726,7 +728,7 @@ a{
 
 /*карта и какая-то фигня*/
  .map{
- width: 1200px;
+ width: 100%;
  border: none;
  line-height: 0;
  padding: 0;
