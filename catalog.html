@@ -104,9 +104,9 @@
    <main>
    <div class="breadcrumbs">
      <a class="link breadcrumbs-link" href="index.html">Главная</a>
-     <span>»</span>
+     <!--<span>»</span>-->
      <a class="link breadcrumbs-link" href="#">Каталог</a>
-     <span>»</span>
+     <!--<span>»</span>-->
      <a class="link breadcrumbs-link-current" href="#">Сливочное</a>
     </div>
     <h1 class="main-title">Сливочное мороженое</h1>
@@ -114,17 +114,21 @@
      <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
       <fieldset class="filter">
        <legend class="filter-legend">Сортировка:</legend>
-       <select name="filter-form-sorting" id="filter-form-sorting">
-        <option value="popularity" selected>по популярности</option>
-        <option value="cheap">сначала недорогие</option>
-        <option value="expensive">сначала дорогие</option>
-        <option value="fat-content">по жирности</option>
+       <div class="filter-sort-field">
+       	<select class="filter-form-sorting" name="filter-form-sorting" id="filter-form-sorting">
+         <option value="popularity" selected>по популярности</option>
+         <option value="cheap">сначала недорогие</option>
+         <option value="expensive">сначала дорогие</option>
+         <option value="fat-content">по жирности</option>
        </select>
+       <span class="select-icon"></span>
+       </div>
       </fieldset>
       <fieldset class="filter">
-       <legend class="filter-legend">Цена: 100 руб. - 500 руб.</legend>
+       <legend class="filter-legend">Цена: 100 руб. – 500 руб.</legend>
        <div class="filter-range">
        	<div class="filter-range-bar"></div>
+       	<div class="filter-range-bar-1"></div>
        	<div class="filter-range-toggle range-toggle-min"></div>
        	<div class="filter-range-toggle range-toggle-max"></div>
        </div>
@@ -158,24 +162,26 @@
         		<label class="option-label" for="chocolate-id">шоколадные</label>
         	</li>
         	<li class="option filter-option">
-        		<input class="option-input" type="checkbox" name="sugar" id="sugar-id" checked>
-        		<label class="option-label" for="sugar-id">сахарные присыпки</label>
+        		<input class="option-input option-input-sugar" type="checkbox" name="sugar" id="sugar-id" checked>
+        		<label class="option-label option-label-sugar" for="sugar-id">сахарные присыпки</label>
         	</li>
         	<li class="option filter-option">
-        		<input class="option-input" type="checkbox" name="fruit" id="fruit-id">
-        		<label class="option-label" for="fruit-id">фрукты</label>
+        		<input class="option-input option-input-fruit" type="checkbox" name="fruit" id="fruit-id">
+        		<label class="option-label option-label-fruit" for="fruit-id">фрукты</label>
         	</li>
         	<li class="option filter-option">
-        		<input class="option-input" type="checkbox" name="syrup" id="syrup-id">
-        		<label class="option-label" for="syrup-id">сиропы</label>
+        		<input class="option-input option-input-syrup" type="checkbox" name="syrup" id="syrup-id">
+        		<label class="option-label option-label-syrup" for="syrup-id">сиропы</label>
         	</li>
         	<li class="option filter-option">
-        		<input class="option-input" type="checkbox" name="jam" id="jam-id">
-        		<label class="option-label" for="jam-id">джемы</label>
+        		<input class="option-input option-input-jam" type="checkbox" name="jam" id="jam-id">
+        		<label class="option-label option-label-jam" for="jam-id">джемы</label>
         	</li>
         </ul>
       </fieldset>
-      <button class="filter-button" type="submit">Применить</button>
+      <div class="filter-wrap-button">
+      	<button class="filter-button" type="submit">Применить</button>
+      </div>
      </form>
     </div>
     <section class="products">
@@ -183,73 +189,73 @@
      <article class="product">
       <h3 class="product-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
       <img class="product-image" src="img/content/catalog/product-1.jpg" width="267" height="267" alt="мороженое Gllacy сливочное с апельсиновым джемом и цитрусовой стружкой">
-      <span class="product-price">310 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">310 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочно-кофейное с кусочками шоколада</h3>
       <img class="product-image" src="img/content/catalog/product-2.jpg" width="267" height="267" alt="мороженое Gllacy сливочно-кофейное с кусочками шоколада">
-      <span class="product-price">380 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">380 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
       <img class="product-image" src="img/content/catalog/product-3.jpg" width="267" height="267" alt="мороженое Gllacy сливочно-клубничное с присыпкой из белого шоколада">
-      <span class="product-price">355 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">355 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочное крем-брюле с карамельной подливкой</h3>
       <img class="product-image" src="img/content/catalog/product-4.jpg" width="267" height="267" alt="мороженое Gllacy cливочное крем-брюле с карамельной подливкой">
-      <span class="product-price">415 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">415 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочное с брусничным джеммом</h3>
       <img class="product-image" src="img/content/catalog/product-5.jpg" width="267" height="267" alt="мороженое Gllacy сливочное с брусничным джеммом">
-      <span class="product-price">325 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">325 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочно-черничное с цельными ягодами черники</h3>
       <img class="product-image" src="img/content/catalog/product-6.jpg" width="267" height="267" alt="мороженое Gllacy сливочно-черничное с цельными ягодами черники">
-      <span class="product-price">410 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">410 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочно-лимонное с карамельной присыпкой</h3>
       <img class="product-image" src="img/content/catalog/product-7.jpg" width="267" height="267" alt="мороженое Gllacy сливочно-лимонное с карамельной присыпкой">
-      <span class="product-price">375 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">375 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочное с шоколадной стружкой</h3>
       <img class="product-image" src="img/content/catalog/product-8.jpg" width="267" height="267" alt="мороженое Gllacy сливочное с шоколадной стружкой">
-      <span class="product-price">320 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">320 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочно-ванильное с кусочками шоколада</h3>
       <img class="product-image" src="img/content/catalog/product-9.jpg" width="267" height="267" alt="мороженое Gllacy сливочно-ванильное с кусочками шоколада">
-      <span class="product-price">440 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">440 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочное с ментоловым сиропом</h3>
       <img class="product-image" src="img/content/catalog/product-10.jpg" width="267" height="267" alt="мороженое Gllacy сливочное с ментоловым сиропом">
-      <span class="product-price">435 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">435 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочное с кусочками черного шоколада</h3>
       <img class="product-image" src="img/content/catalog/product-11.jpg" width="267" height="267" alt="мороженое Gllacy сливочное с кусочками черного шоколада">
-      <span class="product-price">355 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">355 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
       <h3 class="product-title">Сливочное с мятным сиропом</h3>
       <img class="product-image" src="img/content/catalog/product-12.jpg" width="267" height="267" alt="мороженое Gllacy сливочное с мятным сиропом">
-      <span class="product-price">420 Р<span class="product-mass">/кг</span></span>
+      <span class="product-price">420 <span class="visually-hidden">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
     </section>
