@@ -167,23 +167,25 @@
         <p class="field dispatch-field">
          <input class="field-input dispatch-input-field" type="email" name="dispatch-email" id="dispatch-email" required>
          <label class="field-label dispatch-label-field" for="dispatch-email">Электронная почта</label>
+         <button class="button dispatch-button" type="submit">Отправить</button>
         </p>
-        <button class="button dispatch-button" type="submit">Отправить</button>
        </form>
       </div>
      </section>
     </div>
    </div>
-   <section class="map">
-    <img src="img/content/map.jpg" width="1200" height="640" alt="карта, как нас найти">
-   </section>
-    <section class="feedback">
+   <div class="map">
+    <div class="map-js" id="map"></div>
+    <div class="map-container">
+     <div class="map-inner">
+     <img class="map-img" src="img/content/map.jpg" width="1200" height="" alt="карта, как нас найти">
+     <section class="feedback">
      <h2 class="visually-hidden">Форма обратной связи</h2>
      <dl class="feedback-contacts">
-      <dt class="feedback-contacts-term">Адрес главного офиса и офлайн магазина:</dt>
+      <dt class="feedback-contacts-term">Адрес главного офиса и офлайн-магазина: </dt>
       <dd class="feedback-contacts-value">ул. Большая Конюшенная 19/8, Санкт-Петербург</dd>
       <dt class="feedback-contacts-term">Для заказов по телефону:</dt>
-      <dd class="feedback-contacts-value">8 812 450-25-25 <span>(с 10 до 20 ежедневно)</span></dd>
+      <dd class="feedback-contacts-value">8 812 450-25-25 <br><span>(с 10 до 20 ежедневно)</span></dd>
      </dl>
      <button class="feedback-button button" type="button">Форма обратной связи</button>
      <div class="feedback-popup popup">
@@ -207,28 +209,31 @@
        </div>
       </form>
      </div>
-    </section>
+     </section>
+     </div>
+    </div>
+   </div>
   </main>
   <div class="container">
    <footer class="main-footer">
     <div class="footer-col">
-     <a class="social-btn social-btn-tw" href="#" >Twitter</a>
-     <a class="social-btn social-btn-inst" href="#">Instagram</a>
-     <a class="social-btn social-btn-fb" href="#">Facebook</a>
-     <a class="social-btn social-btn-vk" href="#">ВКонтакте</a>
+     <a href="#" class="social-btn social-btn-tw"><span class="visually-hidden">Twitter</span></a>
+     <a href="#" class="social-btn social-btn-inst"><span class="visually-hidden">Instagram</span></a>
+     <a href="#" class="social-btn social-btn-fb"><span class="visually-hidden">Facebook</span></a>
+     <a href="#" class="social-btn social-btn-vk"><span class="visually-hidden">ВКонтакте</span></a>
     </div>
     <div class="footer-col">
-     <a class="link" href="#">Для поставщиков</a>
-     <a class="link" href="#">О производстве</a>
-     <a class="link" href="#">Наши документы</a>
-     <a class="link" href="#">Экологические стандарты</a>
+     <a href="#" class="link">Для поставщиков</a>
+     <a href="#" class="link">О производстве</a>
+     <a href="#" class="link">Наши документы</a>
+     <a href="#" class="link">Экологические стандарты</a>
     </div>
     <div class="footer-col">
-     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/logo-htmlacademy.svg" width="108" height="38" alt="логотип HTML Academy"></a>
-     <span>Сделано в</span>
-     <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-     <span>&copy; 2017</span>
-    </div>	
+     <a class="footer-col-img" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/logo-htmlacademy.svg" width="108" height="38" alt="логотип HTML Academy"></a>
+     <p class="footer-col-item">
+      <span>Сделано в </span><a href="https://htmlacademy.ru/intensive/htmlcss" class="link">HTML Academy</a><span> &copy; 2017</span>
+      </p>
+    </div> 
    </footer>
   </div>
   </div>
