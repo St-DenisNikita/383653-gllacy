@@ -6,6 +6,7 @@ body{
  padding: 0;
  width: 100%;
  overflow: visible;
+ min-width: 1200px;
  /*background-color: rgb(132, 157, 143);*/
 }
 
@@ -13,7 +14,7 @@ body{
  background-color: rgb(132, 157, 143);
  color: rgb(255, 255, 255);
  margin: 0 auto;
- min-width: 1200px;
+ width: 100%;
 }
 
 main{
@@ -128,6 +129,11 @@ a{
  padding: 7px 14px;
 }
 
+.main-menu-link:first-child,
+.main-menu-link-current{
+ position: relative;
+}
+
 .main-menu-link-current{
  background-color: rgb(255, 77, 50);
  border-bottom-left-radius: 20% 50%;
@@ -149,9 +155,30 @@ a{
 }
 
 /*выпадающее подменю*/
+.sub-menu{
+ position: absolute;
+ display: block;
+ border-radius: 5px;
+ padding-bottom: 5px;
+ padding-top: 5px;
+ background-color: rgb(248, 247, 244);
+ border-radius: 5px;
+ box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+ top: 60px;
+}
+
 .sub-menu-item{
  background-color: rgb(248, 247, 244);
  color: rgb(50, 50, 50);
+ padding-top: 1px;
+ padding-bottom: 1px;
+}
+
+.sub-menu-item:first-child{
+ border-bottom: 1px solid rgba(50, 50, 50, .2);
+ width: 127px;
+ margin-left: 8px;
+ margin-right: 8px;
 }
 
 .sub-menu-link{
@@ -160,6 +187,10 @@ a{
  font-size: 14px;
  font-weight: 400;
  line-height: 16px;
+ padding-left: 21px;
+ padding-right: 21px;
+ padding-top: 5px;
+ padding-bottom: 7px;
 }
 
 .sub-menu-link:hover{
@@ -175,6 +206,10 @@ a{
  background-color: rgb(208, 112, 88);
  color: rgb(255, 255, 255);
  display: block;
+ padding-left: 21px;
+ padding-right: 21px;
+ padding-top: 5px;
+ padding-bottom: 7px;
 }
 
 .sub-menu-item:first-child .sub-menu-link,
@@ -615,7 +650,7 @@ align-items: flex-end;
  flex-basis: 560px;
  flex-wrap: wrap;
  font-weight: 700;
- margin-bottom: 40px;
+ margin-bottom: 39px;
  min-height: 229px;
 }
 
@@ -663,24 +698,36 @@ align-items: flex-end;
 }
 
 .product{
- display: inline-flex;
+ display: flex;
  flex-direction: column;
+ /*box-sizing: border-box;*/
  flex-basis: 267px;
+ width: 267px;
  position: relative;
- padding-bottom: 39px;
- vertical-align: top;
  height: 405px;
- margin: -5px;
+ margin-top: -5px;
+ margin-bottom: -66px;
+ margin-left: -14px;
+ margin-right: -14px;
+ border-radius: 5px;
+ padding-top: 6px;
+ padding-right: 14px;
+ padding-left: 14px;
+ padding-bottom: 22px;
 }
 
 .product:hover{
+	position: relative;
  background-color: rgba(248,247,244,.3);
   box-shadow: 0 20px 20px rgba(0,0,0,.4);
   padding-bottom: 0;
+  z-index: 2;
+  width: 267px;
 }
 
 .product:hover .product-link{
  display: block;
+ 
 }
 
 .hit-image{
@@ -751,6 +798,7 @@ align-items: flex-end;
  background-repeat: repeat;
  border-radius: 15px;
  color: rgb(50, 50, 50);
+ margin-top: 1px;
  margin-bottom: 40px;
  width: 1146px;
 
@@ -1037,7 +1085,7 @@ height: auto;
 .filter-form{
  display: flex;
  flex-wrap: wrap;
- padding-bottom: 9px;
+ padding-bottom: 8px;
 }
 
 .filter{
@@ -1284,138 +1332,6 @@ padding-top: 7px;
  color: rgb(50, 50, 50);
 }
 
-/*модальные окна*/
-.wrap-field{
- background-color: rgb(248, 247, 244);
- position: absolute;
-}
-
-.field{
- position: relative;
-}
-
-.field-label{
- color: rgb(153, 153, 153);
- font-family: 'Roboto', Arial, sans-serif;
- font-size: 14px;
- font-weight: 400;
- left: 14px;
- line-height: 24px;
- pointer-events: none;
- position: absolute;
- top: 11px;
- transform: translateY(-28px);
- transition: transform 200ms ease;  
-}
-
-.dispatch-label-field{
- font-size: 16px;
- line-height: 22px;
-}
-
-.feedback-label-field{
- font-size: 16px;
-}
-
-.field-label:before{
-  content: attr(data);
-  white-space: nowrap;
-}
-
-.field-input,
-.field-textarea{
- border: none;
- border-radius: 5px;
- box-shadow: 0 0 0 1px #d3d3d2 inset;
- box-sizing: border-box;
- font-weight: 700;
- padding: 12px 12px;
- padding-bottom: 14px;
-}
-
-.actions-search-field .field-input{
- width: 311px;
-}
-
-.actions-login-field .field-input{
- width: 241px;
-}
-
-.dispatch-input-field{
- width: 368px;
-}
-
-.feedback-input-field{
- width: 267px;
-}
-
-.field-textarea{
- width: 428px;
-}
-
-.field-input:hover,
-.field-textarea:hover{
- box-shadow: 0 0 0 2px #c7c6c5 inset;
-}
-
-.field-input:focus,
-.field-textarea:focus{
- outline: none;
- box-shadow: 0 0 0 2px #8fbdec inset;
-}
-
-.field-input:invalid + .field-label{
-  transform: translateY(0);
-}
-
-.field-input:focus + .field-label,
-.field-textarea:focus + .field-label{
- color: rgb(91, 157, 223);
- font-size: 11px;
- font-weight: 400;
- line-height: 13px;
- transform: translateY(-28px);
-}
-
-.field-input:valid + .field-label,
-.field-textarea:valid + .field-label{
- color: rgb(153, 153, 153);
- font-size: 11px;
- font-weight: 400;
- line-height: 13px;
-}
-/*корзина*/
-.cart-table{
- background-color: rgb(248, 247, 244);
- color: rgb(50, 50, 50); 
- font-size: 13px;
- font-weight: 400;
- line-height: 16px;
-}
-
-.cart-table-price{
- color: rgb(153, 153, 153);
-}
-
-.cart-table-row-total{
- font-size: 15px;
- font-weight: 700;
- line-height: 18px;
-}
-
-.actions-login .link{
- border-bottom: 1px solid rgba(50, 50, 50, 0.3);
- color: rgb(50, 50, 50);
- font-size: 13px;
- font-weight: 400;
- line-height: 24px;
-}
-
-.actions-login .link:hover, .actions-login .link:active{
- border-bottom-color: rgba(232, 77, 55, 0.3);
- color: rgb(232, 77, 55);
-}
-
 /*чекбокс*/
 .filter-option{
  padding-bottom: 10px;
@@ -1497,4 +1413,179 @@ padding-top: 7px;
 
 .option-input-radio:checked + .option-label-radio:after{
  display: block;
+}
+
+/*модальные окна*/
+.wrap-field{
+ background-color: rgb(248, 247, 244);
+ position: absolute;
+}
+
+.field{
+ position: relative;
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
+.field-label{
+ color: rgb(153, 153, 153);
+ font-family: 'Roboto', Arial, sans-serif;
+ font-size: 14px;
+ font-weight: 400;
+ left: 14px;
+ line-height: 24px;
+ pointer-events: none;
+ position: absolute;
+ top: 11px;
+ transform: translateY(-28px);
+ transition: transform 200ms ease;  
+}
+
+.dispatch-label-field{
+ font-size: 16px;
+ line-height: 22px;
+}
+
+.feedback-label-field{
+ font-size: 16px;
+}
+
+.field-label:before{
+  content: attr(data);
+  white-space: nowrap;
+}
+
+.field-input,
+.field-textarea{
+ border: none;
+ border-radius: 5px;
+ box-shadow: 0 0 0 1px #d3d3d2 inset;
+ box-sizing: border-box;
+ font-weight: 700;
+ padding: 12px 12px;
+ padding-bottom: 14px;
+}
+
+.actions-search-field .field-input{
+ width: 311px;
+}
+
+.actions-login-field .field-input,
+.actions-password-field .field-input{
+ width: 241px;
+}
+
+.dispatch-input-field{
+ width: 368px;
+}
+
+.feedback-input-field{
+ width: 267px;
+}
+
+.field-textarea{
+ width: 428px;
+}
+
+.field-input:hover,
+.field-textarea:hover{
+ box-shadow: 0 0 0 2px #c7c6c5 inset;
+}
+
+.field-input:focus,
+.field-textarea:focus{
+ outline: none;
+ box-shadow: 0 0 0 2px #8fbdec inset;
+}
+
+.field-input:invalid + .field-label{
+  transform: translateY(0);
+}
+
+.field-input:focus + .field-label,
+.field-textarea:focus + .field-label{
+ color: rgb(91, 157, 223);
+ font-size: 11px;
+ font-weight: 400;
+ line-height: 13px;
+ transform: translateY(-28px);
+}
+
+.field-input:valid + .field-label,
+.field-textarea:valid + .field-label{
+ color: rgb(153, 153, 153);
+ font-size: 11px;
+ font-weight: 400;
+ line-height: 13px;
+}
+/*корзина*/
+.cart-table{
+ background-color: rgb(248, 247, 244);
+ color: rgb(50, 50, 50); 
+ font-size: 13px;
+ font-weight: 400;
+ line-height: 16px;
+}
+
+.cart-table-price{
+ color: rgb(153, 153, 153);
+}
+
+.cart-table-row-total{
+ font-size: 15px;
+ font-weight: 700;
+ line-height: 18px;
+}
+
+.actions-login .link{
+ border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+ color: rgb(50, 50, 50);
+ font-size: 13px;
+ font-weight: 400;
+ line-height: 24px;
+}
+
+.actions-login .link:hover, .actions-login .link:active{
+ border-bottom-color: rgba(232, 77, 55, 0.3);
+ color: rgb(232, 77, 55);
+}
+
+.actions-search .wrap-field{
+	display: block;
+	position: absolute;
+	top: 58px;
+	right: 228px;
+	padding-right: 15px;
+	padding-left: 15px;
+	border-radius: 6px;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.actions-login .wrap-field{
+ display: block;
+	position: absolute;
+	top: 59px;
+	right: 125px;
+	padding-right: 15px;
+	padding-left: 15px;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+	border-radius: 6px;
+	padding-bottom: 21px;
+	z-index: 3;
+}
+
+.actions-login-button{
+background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+  padding: 13px 26px;
+  border-radius: 50px;
+  margin-right: 21px;
+}
+
+.field-wrap{
+	display: flex;
+}
+
+.wrap-links{
+ width: 124px;
 }
