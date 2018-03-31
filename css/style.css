@@ -194,7 +194,6 @@ a{
 .main-menu-item:first-child:hover::after{
 position: absolute;
 content: "";
-background-color: lightyellow;
 top: 25px;
 left: 10px;
 height: 10px;
@@ -302,16 +301,6 @@ width: 100%;
  right: 0;
  top: 0;
  width: 17px;
-}
-
-.actions-button-search:hover::after{
- background-color: red;
- content: "";
- height: 10px;
- top: 30px;
- left: -0px;
- position: absolute;
- width: 50px;
 }
 
 .actions-button-search:hover::before{
@@ -621,6 +610,17 @@ width: 100%;
  padding-top: 6px;
  position: relative;
  width: 267px;	
+}
+
+.product:nth-of-type(5),
+.product:nth-of-type(6),
+.product:nth-of-type(7),
+.product:nth-of-type(8),
+.product:nth-of-type(9),
+.product:nth-of-type(10),
+.product:nth-of-type(11),
+.product:nth-of-type(12){
+ margin-top: 21px;
 }
 
 .product:hover{	
@@ -1378,7 +1378,7 @@ width: 100%;
 /*пагинатор*/
 .paginator{
  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
- margin-top: 87px;
+ margin-top: 75px;
  padding: 0;
  padding-bottom: 34px;
  position: relative;
@@ -1589,9 +1589,10 @@ width: 100%;
 
 .social-btn{ 
  background-repeat: no-repeat;
+ background-position: center;
+ background-clip: padding-box;
  border: 3px solid rgba(255, 255, 255, 0.5);
  border-radius: 50%;
- box-sizing: border-box;
  height: 38px;
  margin-right: 11px;
  padding: 8px 16px;
@@ -1936,14 +1937,41 @@ right: 15px;
  padding: 11px 24px;
 }
 
-.actions-button-search:hover + .wrap-field{
+.actions-search:hover::after{
+ position: absolute;
+ content: "";
+ top: 50px;
+ left: 880px;
+ height: 20px;
+ width: 40px;
+}
+
+.actions-login:hover::after{
+ position: absolute;
+ content: "";
+ top: 50px;
+ left: 920px;
+ height: 20px;
+ width: 110px;
+}
+
+.actions-cart:hover::after{
+ position: absolute;
+ content: "";
+ top: 50px;
+ left: 1030px;
+ height: 20px;
+ width: 110px;
+}
+
+.actions-search:hover .wrap-field{
  display: block;
 }
 
-.actions-button-login:hover + .wrap-field{
+.actions-login:hover .wrap-field{
  display: block;
 }
 
-.actions-button-cart:hover + .wrap-field{
+.actions-cart:hover .wrap-field{
  display: block;
 }
