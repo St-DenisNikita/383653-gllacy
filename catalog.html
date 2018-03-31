@@ -77,14 +77,14 @@
 	          <th class="cart-table-cell-name">Стоимость товара</th>
           </tr>
           <tr class="cart-table-row">
- 	         <td class="cart-table-cell"><button class="cart-table-button" type="button">Удалить товар из корзины</button></td>
+ 	         <td class="cart-table-cell"><button class="cart-table-button" type="button"><!--Удалить товар из корзины--></button></td>
  	         <td class="cart-table-cell"><img class="cart-table-img" src="img/content/catalog/product-1.jpg" width="33" height="33" alt="мороженое Gllacy сливочное с апельсиновым джемом и цитрусовой стружкой"></td>
  	         <td class="cart-table-cell"><span class="cart-table-product">Пломбир с апельсиновым джемом</span></td>
  	         <td class="cart-table-cell"><span class="cart-table-quantity">1,5 кг &#215;</span><span class="cart-table-price"> 200 руб.</span></td>
  	         <td class="cart-table-cell"><span class="cart-table-cost">300 руб.</span></td>
           </tr>
           <tr class="cart-table-row">
- 	         <td class="cart-table-cell"><button class="cart-table-button" type="button">Удалить товар из корзины</button></td>
+ 	         <td class="cart-table-cell"><button class="cart-table-button" type="button"><!--Удалить товар из корзины--></button></td>
  	         <td class="cart-table-cell"><img class="cart-table-img" src="img/content/catalog/product-3.jpg" width="33" height="33" alt="мороженое Gllacy сливочно-клубничное с присыпкой из белого шоколада"></td>
  	         <td class="cart-table-cell"><span class="cart-table-product">Клубничный пломбир с присыпкой из белого шоколада</span></td>
  	         <td class="cart-table-cell"><span class="cart-table-quantity">1,5 кг &#215;</span><span class="cart-table-price"> 300 руб.</span></td>
@@ -95,7 +95,7 @@
  	         <td class="cart-table-total-cost">750 руб.</td>
           </tr>
          </table> <!-- конец таблицы -->
-         <button type="submit" class="button">Оформить заказ</button>
+         <button class="button button-cart" type="submit">Оформить заказ</button>
         </form>
        </div>
       </div>
@@ -131,8 +131,8 @@
       <fieldset class="filter">
        <legend class="filter-legend">Цена: 100 руб. – 500 руб.</legend>
        <div class="filter-range">
-       	<div class="filter-range-bar"></div>
-       	<div class="filter-range-bar-1"></div>
+       	<div class="filter-range-price"></div>
+       	<div class="filter-range-selected"></div>
        	<div class="filter-range-toggle range-toggle-min"></div>
        	<div class="filter-range-toggle range-toggle-max"></div>
        </div>
@@ -166,20 +166,20 @@
         		<label class="option-label" for="chocolate-id">шоколадные</label>
         	</li>
         	<li class="option filter-option">
-        		<input class="option-input option-input-sugar" type="checkbox" name="sugar" id="sugar-id" checked>
-        		<label class="option-label option-label-sugar" for="sugar-id">сахарные присыпки</label>
+        		<input class="option-input" type="checkbox" name="sugar" id="sugar-id" checked>
+        		<label class="option-label" for="sugar-id">сахарные присыпки</label>
         	</li>
         	<li class="option filter-option">
-        		<input class="option-input option-input-fruit" type="checkbox" name="fruit" id="fruit-id">
-        		<label class="option-label option-label-fruit" for="fruit-id">фрукты</label>
+        		<input class="option-input" type="checkbox" name="fruit" id="fruit-id">
+        		<label class="option-label" for="fruit-id">фрукты</label>
         	</li>
         	<li class="option filter-option">
-        		<input class="option-input option-input-syrup" type="checkbox" name="syrup" id="syrup-id">
-        		<label class="option-label option-label-syrup" for="syrup-id">сиропы</label>
+        		<input class="option-input" type="checkbox" name="syrup" id="syrup-id">
+        		<label class="option-label" for="syrup-id">сиропы</label>
         	</li>
         	<li class="option filter-option">
-        		<input class="option-input option-input-jam" type="checkbox" name="jam" id="jam-id">
-        		<label class="option-label option-label-jam" for="jam-id">джемы</label>
+        		<input class="option-input" type="checkbox" name="jam" id="jam-id">
+        		<label class="option-label" for="jam-id">джемы</label>
         	</li>
         </ul>
       </fieldset>
