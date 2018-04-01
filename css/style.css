@@ -858,7 +858,7 @@ width: 100%;
 
 /*карта*/
  .map{
- background-color: rgb(132, 157, 143);
+ background-color: rgb(153, 174, 162);
  line-height: 0;
  margin: 0;
  min-height: 430px;
@@ -868,7 +868,7 @@ width: 100%;
 }
 
 .map-js{
- background-color: rgba(150, 150, 150, 0.1);
+ background-color: rgba(150, 150, 150, 0);
  position: absolute;
  top: 0;
  width: 100%;
@@ -1541,9 +1541,10 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
  box-sizing: border-box;
  column-count: 2;
  column-gap: 0;
- padding-left: 144px;
+ padding-left: 143px;
  padding-right: 162px;
  padding-top: 32px;
+ height: 30px;
  width: 590px;
 }
 
@@ -1552,8 +1553,7 @@ display: block;
  width: 120px;
  font-size: 13px;
  font-weight: 400;
- line-height: 18px;
- margin-bottom: 3px;
+ line-height: 22px;
 }
 
 .footer-col:nth-child(2) .link-width{
