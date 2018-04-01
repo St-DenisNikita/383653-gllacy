@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize-min.css">
+  <link rel="stylesheet" type="text/css" href="css/style-min.css">
  </head>
  <body>
  <div class="wrapper">
@@ -16,7 +16,7 @@
     </div>
     <nav class="nav-main">
      <ul class="main-menu">
-      <li class="main-menu-item"><a class="main-menu-link-current" href="#">Каталог</a>
+      <li class="main-menu-item"><a class="main-menu-link main-menu-link-current" href="#">Каталог</a>
         <ul class="sub-menu">
          <li class="sub-menu-item"><a class="sub-menu-link" href="#">Новинки</a></li>
          <li class="sub-menu-item"><a class="sub-menu-link-current" href="#">Сливочное</a></li>
@@ -32,7 +32,7 @@
      <div class="actions">
       <div class="actions-search">
        <a class="actions-button actions-button-search" href="#"><span class="visually-hidden">Поиск</span></a>
-       <div class="wrap-field">
+       <div class="wrap-field wrap-field-search">
         <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
          <p class="field actions-search-field">
           <input class="field-input" type="search" name="actions-search" id="actions-search" required>
@@ -44,7 +44,7 @@
       </div>
       <div class="actions-login">
        <a class="actions-button actions-button-login" href="#">Вход</a>
-       <div class="wrap-field">
+       <div class="wrap-field wrap-field-login">
         <form class="actions-login-form" method="post" action="https://echo.htmlacademy.ru">
          <p class="field actions-login-field">
           <input class="field-input" type="email" name="actions-login" id="user-login" required>
@@ -66,7 +66,7 @@
       </div>
       <div class="actions-cart">
        <a class="actions-button actions-button-cart" href="#">2 товара</a>
-       <div class="wrap-field">
+       <div class="wrap-field wrap-field-cart">
       	 <form class="actions-form-cart" method="post" action="https://echo.htmlacademy.ru">
          <table class="cart-table"> <!-- начало таблицы -->
           <tr class="cart-table-row-name visually-hidden">
@@ -106,13 +106,11 @@
      <p class="contact-information-number">8 812 450-25-25</p>
      </div>
    </header>
-   <main>
+   <main class="main-catalog">
    <div class="breadcrumbs">
      <a class="link breadcrumbs-link" href="index.html">Главная</a>
-     <!--<span>»</span>-->
      <a class="link breadcrumbs-link" href="#">Каталог</a>
-     <!--<span>»</span>-->
-     <a class="link breadcrumbs-link-current" href="#">Сливочное</a>
+     <a class="link breadcrumbs-link breadcrumbs-link-current" href="#">Сливочное</a>
     </div>
     <h1 class="main-title">Сливочное мороженое</h1>
     <div class="filters">
@@ -140,7 +138,7 @@
        	</div>
        </div>
       </fieldset>
-      <fieldset class="filter">
+      <fieldset class="filter filter-radio">
        <legend class="filter-legend">Жирность:</legend>
        <ul class="filter-list">
        	<li class="option-radio filter-option-radio">
@@ -161,7 +159,7 @@
        	</li>
        </ul>
       </fieldset>
-      <fieldset class="filter">
+      <fieldset class="filter filter-options">
        <legend class="filter-legend">Наполнители:</legend>
         <ul class="filter-list">
         	<li class="option filter-option">
@@ -242,7 +240,7 @@
       <a class="button product-link" href="#">Быстрый просмотр</a>
      </article>
      <article class="product">
-      <h3 class="product-title">Сливочно-ванильное с <br>sкусочками шоколада</h3>
+      <h3 class="product-title">Сливочно-ванильное с кусочками&nbsp;шоколада</h3>
       <img class="product-image" src="img/content/catalog/product-9.jpg" width="267" height="267" alt="мороженое Gllacy сливочно-ванильное с кусочками шоколада">
       <span class="product-price">440<span class="ruble">Р</span><span class="product-mass">/кг</span></span>
       <a class="button product-link" href="#">Быстрый просмотр</a>
