@@ -13,7 +13,6 @@
 body{
  border: none;
  font-family: "Roboto", Arial, sans-serif;
- min-width: 1200px;
  margin: 0;
  padding: 0;
 }
@@ -68,12 +67,35 @@ a{
  display: none;
 }
 
+/*фокус*/
+.main-menu-link:focus,
+.main-menu-link-current:focus,
+.logo-img-link:focus,
+.actions-button:focus,
+.button:focus,
+.slide-toggle:focus,
+.product-title-link:focus,
+.blog-teaser-link:focus,
+.social-btn:focus,
+.footer-col .link:focus,
+.footer-col-img:focus,
+.breadcrumbs .link:focus,
+.filter-form-sorting:focus,
+.filter-button:focus,
+.paginator-link:focus,
+.paginator-link-next:focus,
+.paginator-link-prev:focus{
+  outline: 2px solid rgba(246, 181, 165, .9);
+}
+
 /*Обертки*/
 .wrapper{
  background-color: rgb(153, 174, 162);
  color: rgb(255, 255, 255);
  margin: 0 auto;
- width: 100%;
+ margin-right: auto;
+ margin-left: auto;
+ width: 1200px;
 }
 
 .container{
@@ -456,6 +478,7 @@ width: 100%;
 }
 
 .slide{
+ box-sizing: border-box;
  margin-top: -76px;
  padding-left: 51px;
  width: 100%;
@@ -660,6 +683,12 @@ width: 100%;
  /*width: 257px;*/
 }
 
+.product-title-link{
+  font: inherit;
+  color: inherit;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .hit-image{
  position: absolute;
  top: 5px;
@@ -702,6 +731,10 @@ width: 100%;
 
 .product:hover .product-link{
  display: block;
+}
+
+.product:hover .product-title-link{
+  border-bottom: rgba(255, 255, 255, 0);
 }
 
 /*преимущества*/
@@ -1214,6 +1247,7 @@ width: 100%;
 .option-input + .option-label{
  cursor: pointer;
  display: inline-block;
+ vertical-align: top;
  position: relative;
  padding-left: 32px;
  text-align: right;
@@ -1421,7 +1455,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
 .field-label{
  color: rgb(153, 153, 153);
- font-family: 'Roboto', Arial, sans-serif;
+ font-family: "Roboto", Arial, sans-serif;
  font-size: 14px;
  font-weight: 400;
  left: 14px;
@@ -1522,48 +1556,46 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
 /*footer*/
 .main-footer{
+ align-items: center;
  display: flex;
  justify-content: space-between;
  padding-bottom: 25px;
+ padding-top: 22px;
  width: 100%;
 }
 
-.footer-col{
- padding-top: 20px;
- width: 267px;
-}
-
 .footer-col:first-child{
- padding-top: 43px;
+ flex-basis: 190px;
 }
 
 .footer-col:nth-child(2){
- box-sizing: border-box;
- column-count: 2;
- column-gap: 0;
- padding-left: 143px;
- padding-right: 162px;
- padding-top: 32px;
- height: 30px;
- width: 590px;
+ display: flex;
+ flex-wrap: wrap;
+ flex-basis: 400px;
+ padding-left: 97px;
 }
 
+
 .footer-col:nth-child(2) .link{
-display: block;
  width: 120px;
- font-size: 13px;
- font-weight: 400;
+ margin-right: 47px;
  line-height: 22px;
+ }
+
+.footer-col:nth-child(2) .link:nth-child(1),
+.footer-col:nth-child(2) .link:nth-child(3){
+margin-right: 22px;
 }
 
 .footer-col:nth-child(2) .link-width{
-width: 170px;
+ width: 167px;
+ margin-right: 0px;
+}
+
+.footer-col:last-child{
 }
 
 .footer-col:nth-child(2) .link-bold{
- font-size: 13px;
- font-weight: 700;
- line-height: 16px;
  position: relative;
 }
 
@@ -1574,9 +1606,10 @@ width: 170px;
  height: 15px;
  left: -21px;
  position: absolute;
- top: 3px;
+ top: 6px;
  width: 15px;
 }
+
 .social-btn,
 .footer-col .link,
 .footer-col span{
@@ -1584,6 +1617,14 @@ width: 170px;
  font-size: 12px;
  font-weight: 400;
  line-height: 18px;
+}
+
+.footer-col:nth-child(2) .link{
+ font-size: 13px;
+}
+
+.footer-col:nth-child(2) .link-bold{
+ font-weight: 700;
 }
 
 .social-btn{ 
@@ -1645,6 +1686,7 @@ width: 170px;
 
 .social-btn-vk{
  background-image: url("../img/decoration/vk.svg");
+ margin-right: 0;
 }
 
 .social-btn-vk:hover{
@@ -1662,14 +1704,15 @@ width: 170px;
 }
 
 .footer-col:last-child{
- align-items: flex-end;
  display: flex;
  flex-direction: column;
+ flex-basis: 190px;
+ flex-wrap: wrap;
 }
 
 .footer-col-img{
- align-self: center;
- margin-top: -3px;
+ align-self: flex-start;
+ margin-top: -5px;
 }
 
 .footer-col-item{
@@ -1870,10 +1913,6 @@ padding-top: 24px;
  width: 478px;
 }
 
-.modal-show{
- display: block;
-}
-
 .feedback-form .wrap-field{
  width: 100%;
  height: 100%;
@@ -1961,4 +2000,28 @@ right: 15px;
 
 .actions-cart:hover .wrap-field-cart{
  display: block;
+}
+
+@keyframes bounce{
+  0% {transform: translateY(-2000px) translateX(-50%);}
+  70% {transform: translateY(-40px) translateX(-50%);}
+  90% {transform: translateY(-20px) translateX(-50%);}
+  95% {transform: translateY(-10px) translateX(-50%);}
+  100% {transform: translateY(0px) translateX(-50%);}
+}
+
+.modal-show{
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.4s;
+}
+
+.feedback-page{
+ height: 442px;
+ width: 478px;
+ margin: 0 auto;
+}
+
+.iframe{
+ border: none;
 }
