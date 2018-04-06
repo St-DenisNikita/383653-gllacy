@@ -5,76 +5,76 @@
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/normalize-min.css">
-  <link rel="stylesheet" type="text/css" href="css/style-min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
  </head>
  <body>
   <div class="wrapper">
-  <div class="container">
-   <header class="main-header">
-    <div class="logo">
-     <img src="img/content/logo.svg" width="154" height="64" alt="Логотип">
-    </div>
-    <nav class="nav-main">
-     <ul class="main-menu">
-      <li class="main-menu-item"><a class="main-menu-link" href="#">Каталог</a>
+   <div class="container">
+    <header class="main-header">
+     <div class="logo">
+      <img src="img/content/logo.svg" width="154" height="64" alt="Логотип">
+     </div>
+     <nav class="nav-main">
+      <ul class="main-menu">
+       <li class="main-menu-item"><a class="main-menu-link" href="#">Каталог</a>
         <ul class="sub-menu">
          <li class="sub-menu-item"><a class="sub-menu-link" href="#">Новинки</a></li>
          <li class="sub-menu-item"><a class="sub-menu-link" href="catalog.html">Сливочное</a></li>
          <li class="sub-menu-item"><a class="sub-menu-link" href="#">Щербеты</a></li>
          <li class="sub-menu-item"><a class="sub-menu-link" href="#">Фруктовый лед</a></li>
          <li class="sub-menu-item"><a class="sub-menu-link" href="#">Мелорин</a></li>
-							</ul>
-      </li>
-      <li class="main-menu-item"><a class="main-menu-link" href="#">Доставка и оплата</a></li>
-      <li class="main-menu-item"><a class="main-menu-link" href="#">О Компании</a></li>
-     </ul>		
-    </nav>
-    <div class="actions">
-     <div class="actions-search">
-      <a class="actions-button actions-button-search" href="#"><span class="visually-hidden">Поиск</span></a>
-      <div class="wrap-field wrap-field-search">
-       <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
-        <p class="field actions-search-field">
-         <input class="field-input" type="search" name="actions-search" id="actions-search" required>
-         <label class="field-label" for="actions-search">Что ищем?</label>
-        </p>
-        <button class="visually-hidden" type="submit">Поиск</button>
-       </form>
+							 </ul>
+       </li>
+       <li class="main-menu-item"><a class="main-menu-link" href="#">Доставка и оплата</a></li>
+       <li class="main-menu-item"><a class="main-menu-link" href="#">О Компании</a></li>
+      </ul>		
+     </nav>
+     <div class="actions">
+      <div class="actions-search">
+       <a class="actions-button actions-button-search" href="#"><span class="visually-hidden">Поиск</span></a>
+       <div class="wrap-field wrap-field-search">
+        <form class="actions-search-form" method="get" action="https://echo.htmlacademy.ru">
+         <p class="field actions-search-field">
+          <input class="field-input" type="search" name="actions-search" id="actions-search" placeholder="Что ищем?" required>
+          <label class="field-label visually-hidden" for="actions-search">Что ищем?</label>
+         </p>
+         <button class="visually-hidden" type="submit">Поиск</button>
+        </form>
+       </div>
       </div>
-     </div>
-     <div class="actions-login">
-      <a class="actions-button actions-button-login" href="#">Вход</a>
-      <div class="wrap-field wrap-field-login">
-       <form class="actions-login-form" method="post" action="https://echo.htmlacademy.ru">
-        <p class="field actions-login-field">
-         <input class="field-input" type="email" name="actions-login" id="user-login" required>
-         <label class="field-label" for="user-login">Электронная почта</label>
-        </p>
-        <p class="field actions-password-field">
-         <input class="field-input" type="password" name="actions-password" id="user-password" required>
-         <label class="field-label" for="user-password">Пароль</label>
-        </p>
-        <div class="field-wrap">
-         <button class="button actions-login-button" type="submit">Войти</button>
-         <div class="wrap-links">
-          <a class="link" href="#">Забыли пароль?</a>
-          <a class="link" href="#">Новая регистрация</a>
+      <div class="actions-login">
+       <a class="actions-button actions-button-login" href="#">Вход</a>
+       <div class="wrap-field wrap-field-login">
+        <form class="actions-login-form" method="post" action="https://echo.htmlacademy.ru">
+         <p class="field actions-login-field">
+          <input class="field-input" type="text" name="actions-login" id="user-login" placeholder="Электронная почта" required>
+          <label class="field-label visually-hidden" for="user-login">Электронная почта</label>
+         </p>
+         <p class="field actions-password-field">
+          <input class="field-input" type="password" name="actions-password" id="user-password" placeholder="Пароль" required>
+          <label class="field-label visually-hidden" for="user-password">Пароль</label>
+         </p>
+         <div class="field-wrap">
+          <button class="button actions-login-button" type="submit">Войти</button>
+          <div class="wrap-links">
+           <a class="link" href="#">Забыли пароль?</a>
+           <a class="link" href="#">Новая регистрация</a>
+          </div>
          </div>
-        </div>
-       </form>
+        </form>
+       </div>
+      </div>
+      <div class="actions-cart">
+       <a class="actions-button actions-button-empty-cart" href="cart.html">Пусто</a>
       </div>
      </div>
-     <div class="actions-cart">
-      <a class="actions-button actions-button-empty-cart" href="#">Пусто</a>
+     <div class="contact-information">
+      <p class="contact-information-worktime">С 10 до 20, ежедневно</p>
+      <p class="contact-information-number">8 812 450-25-25</p>
      </div>
-    </div>
-    <div class="contact-information">
-     <p class="contact-information-worktime">С 10 до 20, ежедневно</p>
-     <p class="contact-information-number">8 812 450-25-25</p>
-    </div>
-   </header>
-  </div>
-  <main>
+    </header>
+   </div>
+   <main>
    <div class="container">
     <section class="slider">
      <h2 class="visually-hidden">Специальное предложение!</h2>
@@ -107,17 +107,17 @@
     <section class="banners">
      <h2 class="visually-hidden">Наши промоакции</h2>
      <div class="banner">
-     <div class="banner-ie-wrap">
-      <h3 class="banner-title">Малинка даром!</h3>
-      <p class="banner-item">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-     </div>
+      <div class="banner-ie-wrap">
+       <h3 class="banner-title">Малинка даром!</h3>
+       <p class="banner-item">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+      </div>
       <a class="button banner-button" href="#">Хочу варенье!</a>
      </div>
      <div class="banner">
-     <div class="banner-ie-wrap">
-      <h3 class="banner-title">Шоколадки даром!</h3>
-      <p class="banner-item">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-     </div>
+      <div class="banner-ie-wrap">
+       <h3 class="banner-title">Шоколадки даром!</h3>
+       <p class="banner-item">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+      </div>
       <a class="button banner-button" href="#">Хочу шоколадки!</a>
      </div>
     </section>
@@ -172,8 +172,8 @@
        <p class="dispatch-item">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
        <form class="dispatch-form" method="post" action="https://echo.htmlacademy.ru">
         <p class="field dispatch-field">
-         <input class="field-input dispatch-input-field" type="email" name="dispatch-email" id="dispatch-email" required>
-         <label class="field-label dispatch-label-field" for="dispatch-email">Электронная почта</label>
+         <input class="field-input dispatch-input-field" type="text" name="dispatch-email" id="dispatch-email" placeholder="Электронная почта">
+         <label class="field-label dispatch-label-field visually-hidden" for="dispatch-email">Электронная почта</label>
          <button class="button dispatch-button" type="submit">Отправить</button>
         </p>
        </form>
@@ -181,71 +181,69 @@
     </div>
    </div>
    <div class="map">
-    <div class="map-js" id="map">
-     <iframe class="iframe" src="https://yandex.ru/map-widget/v1/-/CBqQR8gf9A" width="1200" height="430"></iframe>
-    </div>
-    <div class="map-container">
-     <div class="map-inner">
-     <img class="map-img" src="img/content/map.jpg" width="1200" height="430" alt="карта, как нас найти">
-     <section class="feedback">
-     <h2 class="visually-hidden">Форма обратной связи</h2>
-     <dl class="feedback-contacts">
-      <dt class="feedback-contacts-term">Адрес главного офиса и офлайн-магазина: </dt>
-      <dd class="feedback-contacts-value">ул. Большая Конюшенная 19/8, Санкт-Петербург</dd>
-      <dt class="feedback-contacts-term">Для заказов по телефону:</dt>
-      <dd class="feedback-contacts-value">8 812 450-25-25 <br><span>(с 10 до 20 ежедневно)</span></dd>
-     </dl>
-     <a class="feedback-button button" href="feedback-page.html">Форма обратной связи</a>
-     </section>
+     <iframe class="map-js" src="https://yandex.ru/map-widget/v1/-/CBqQR8gf9A" width="1200" height="430"></iframe>
+     <div class="container">
+      <div class="map-inner">
+       <img class="map-img" src="img/content/map.jpg" width="1200" height="430" alt="карта, как нас найти">
+       <section class="feedback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <dl class="feedback-contacts">
+         <dt class="feedback-contacts-term">Адрес главного офиса и офлайн-магазина: </dt>
+         <dd class="feedback-contacts-value">ул. Большая Конюшенная 19/8, Санкт-Петербург</dd>
+         <dt class="feedback-contacts-term">Для заказов по телефону:</dt>
+         <dd class="feedback-contacts-value">8 812 450-25-25 <br><span>(с 10 до 20 ежедневно)</span></dd>
+        </dl>
+        <a class="feedback-button button" href="feedback-page.html">Форма обратной связи</a>
+       </section>
+      </div>
      </div>
-    </div>
    </div>
-  </main>
-  <div class="container">
-   <footer class="main-footer">
-    <div class="footer-col">
-     <a href="#" class="social-btn social-btn-tw"><span class="visually-hidden">Twitter</span></a>
-     <a href="#" class="social-btn social-btn-inst"><span class="visually-hidden">Instagram</span></a>
-     <a href="#" class="social-btn social-btn-fb"><span class="visually-hidden">Facebook</span></a>
-     <a href="#" class="social-btn social-btn-vk"><span class="visually-hidden">ВКонтакте</span></a>
-    </div>
-    <div class="footer-col">
-     <a href="#" class="link link-bold">Для поставщиков</a>
-     <a href="#" class="link">Наши документы</a>
-     <a href="#" class="link">О производстве</a>
-     <a href="#" class="link link-width">Экологические стандарты</a>
-    </div>
-    <div class="footer-col">
-     <a class="footer-col-img" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/logo-htmlacademy.svg" width="108" height="38" alt="логотип HTML Academy"></a>
-     <p class="footer-col-item">
-      <span>Сделано в </span><a href="https://htmlacademy.ru/intensive/htmlcss" class="link">HTML Academy</a><span> &copy; 2017</span>
+   </main>
+   <div class="container">
+    <footer class="main-footer">
+     <div class="footer-col">
+      <a href="#" class="social-btn social-btn-tw"><span class="visually-hidden">Twitter</span></a>
+      <a href="#" class="social-btn social-btn-inst"><span class="visually-hidden">Instagram</span></a>
+      <a href="#" class="social-btn social-btn-fb"><span class="visually-hidden">Facebook</span></a>
+      <a href="#" class="social-btn social-btn-vk"><span class="visually-hidden">ВКонтакте</span></a>
+     </div>
+     <div class="footer-col">
+      <a href="#" class="link link-bold">Для поставщиков</a>
+      <a href="#" class="link">Наши документы</a>
+      <a href="#" class="link">О производстве</a>
+      <a href="#" class="link link-width">Экологические стандарты</a>
+     </div>
+     <div class="footer-col">
+      <a class="footer-col-img" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/content/logo-htmlacademy.svg" width="108" height="38" alt="логотип HTML Academy"></a>
+      <p class="footer-col-item">
+       <span>Сделано в </span><a href="https://htmlacademy.ru/intensive/htmlcss" class="link">HTML Academy</a><span> &copy; 2017</span>
       </p>
-    </div> 
-   </footer>
-  </div>
+     </div> 
+    </footer>
+   </div>
   </div>
   <div class="feedback-popup popup">
-      <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-       <div class="wrap-field">
-        <button class="close-button" type="button"></button>
-        <p class="feedback-form-text">Мы обязательно вам ответим!</p>
-        <p class="field feedback-name-field">
-         <input class="field-input feedback-input-field" type="text" name="feedback-user-name" id="feedback-user-name" required>
-         <label class="field-label feedback-label-field" for="feedback-user-name">Как вас зовут?</label>
-        </p>
-        <p class="field feedback-email-field">
-         <input class="field-input feedback-input-field" type="email" name="feedback-user-email" id="feedback-user-email" required>
-         <label class="field-label feedback-label-field" for="feedback-user-email">Ваша почта для ответа?</label>
-        </p>
-        <p class="field feedback-text-field">
-         <textarea class="field-textarea" name="feedback-form-text" id="feedback-form-text" required></textarea>
-         <label class="field-label feedback-label-field" for="feedback-form-text">Напишите что-нибудь...</label>
-        </p>
-        <button class="button feedback-submit-button" type="submit">Отправить</button>
-       </div>
-      </form>
-   </div>
-   <div class="popup-overlay"></div>
+   <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
+    <div class="wrap-field">
+     <button class="close-button" type="button"></button>
+     <p class="feedback-form-text">Мы обязательно вам ответим!</p>
+     <p class="field feedback-name-field">
+      <input class="field-input feedback-input-field" type="text" name="feedback-user-name" id="feedback-user-name" placeholder="Как вас зовут?">
+      <label class="field-label feedback-label-field visually-hidden" for="feedback-user-name">Как вас зовут?</label>
+     </p>
+     <p class="field feedback-email-field">
+      <input class="field-input feedback-input-field" type="text" name="feedback-user-email" id="feedback-user-email" placeholder="Ваша почта для ответа?">
+      <label class="field-label feedback-label-field visually-hidden" for="feedback-user-email">Ваша почта для ответа?</label>
+     </p>
+     <p class="field feedback-text-field">
+      <textarea class="field-textarea" name="feedback-form-text" id="feedback-form-text" placeholder="Напишите что-нибудь..."></textarea>
+      <label class="field-label feedback-label-field visually-hidden" for="feedback-form-text">Напишите что-нибудь...</label>
+     </p>
+     <button class="button feedback-submit-button" type="submit">Отправить</button>
+    </div>
+   </form>
+  </div>
+  <div class="popup-overlay"></div>
   <script src="js/script-min.js"></script>
  </body>
 </html>
